@@ -253,18 +253,18 @@
                 }
 
                 #tableBuildMakerResults td.tdGpuCount {
-                    background-color: #00003F;
+                    background-color: #10797c;
                     text-align: center;
                     padding: 0px 12px 0px 12px;
                 }
 
                 #tableBuildMakerResults td.tdGpuType {
-                    background-color: #00003F;
+                    background-color: #10797c;
                     text-align: center;
                 }
 
                 #tableBuildMakerResults td.tdGpuPart {
-                    background-color: #00003F;
+                    background-color: #10797c;
                 }
 
                 #tableBuildMakerResults td.tdMobo {
@@ -277,7 +277,7 @@
                 }
 
                 #tableBuildMakerResults td.tdScore {
-                    background-color: #442266;
+                    background-color: #3b2057;
                     text-align: center;
                 }
 
@@ -305,7 +305,7 @@
         }
 
         #divBuildUpgraderForm {
-            background-color: #000066;
+            background-color: rgb(7, 58, 82);
             color: white;
             margin: auto;
             width: 600px;
@@ -348,18 +348,18 @@
                 }
 
                 #tableBuildUpgraderResults td.tdGpuCount {
-                    background-color: #00003F;
+                    background-color: #10797c;
                     text-align: center;
                     padding: 0px 12px 0px 12px;
                 }
 
                 #tableBuildUpgraderResults td.tdGpuType {
-                    background-color: #00003F;
+                    background-color: #10797c;
                     text-align: center;
                 }
 
                 #tableBuildUpgraderResults td.tdGpuPart {
-                    background-color: #00003F;
+                    background-color: #10797c;
                 }
 
                 #tableBuildUpgraderResults td.tdMobo {
@@ -410,21 +410,21 @@
                 }
 
                 #tablePartReplacerResults td.tdGpu1Type {
-                    background-color: #00003F;
+                    background-color: #10797c;
                     text-align: center;
                 }
 
                 #tablePartReplacerResults td.tdGpu1Part {
-                    background-color: #00003F;
+                    background-color: #10797c;
                 }
 
                 #tablePartReplacerResults td.tdGpu2Type {
-                    background-color: #00003F;
+                    background-color: #10797c;
                     text-align: center;
                 }
 
                 #tablePartReplacerResults td.tdGpu2Part {
-                    background-color: #00003F;
+                    background-color: #10797c;
                 }
 
                 #tablePartReplacerResults td.tdMobo {
@@ -481,18 +481,18 @@
                 }
 
                 #table3DMarkScoreCalculatorHistory td.tdGpuCount {
-                    background-color: #00003F;
+                    background-color: #10797c;
                     text-align: center;
                     padding: 0px 12px 0px 12px;
                 }
 
                 #table3DMarkScoreCalculatorHistory td.tdGpuType {
-                    background-color: #00003F;
+                    background-color: #10797c;
                     text-align: center;
                 }
 
                 #table3DMarkScoreCalculatorHistory td.tdGpuPart {
-                    background-color: #00003F;
+                    background-color: #10797c;
                 }
 
                 #table3DMarkScoreCalculatorHistory td.tdMobo {
@@ -558,18 +558,18 @@
                 }
 
                 #tableBuildMakerSaves td.tdGpuCount {
-                    background-color: #00003F;
+                    background-color: #10797c;
                     text-align: center;
                     padding: 0px 12px 0px 12px;
                 }
 
                 #tableBuildMakerSaves td.tdGpuType {
-                    background-color: #00003F;
+                    background-color: #10797c;
                     text-align: center;
                 }
 
                 #tableBuildMakerSaves td.tdGpuPart {
-                    background-color: #00003F;
+                    background-color: #10797c;
                 }
 
                 #tableBuildMakerSaves td.tdMobo {
@@ -596,7 +596,12 @@
 <body id="v1">
     <div id="divNavigationBar">
         <table id="tableNavigationBar" align="center">
-         
+            <tr>
+                <td class="tdNavigationBar" onclick="showPage('div3DMarkScoreCalculator');">3DMark 跑分</td>
+                <td class="tdNavigationBar" onclick="showPage('divBuildMaker');">整机搭配助手</td>
+                <td class="tdNavigationBar" onclick="showPage('divBuildUpgrader');">整机升级助手</td>
+                <td class="tdNavigationBar" onclick="showPage('divPartReplacer');">部件替换助手</td>
+                </tr>
         </table>
     </div>
     
@@ -869,11 +874,11 @@
             <div id="divBuildMakerForm">
                 <form id="formBuildMaker">
                     <table>
-                        <caption>Build Maker</caption>
-                        <tr><td><u>Requirements:</u></td><td></td></tr>
+                        <caption>整机搭配助手</caption>
+                        <tr><td><u>需求：</u></td><td></td></tr>
                         <tr title="Total amount you can spend.">
                             <td>
-                                Budget
+                                预算
                             </td>
                             <td>
                                 <input name="inputBuildMakerBudget">
@@ -881,7 +886,7 @@
                         </tr>
                         <tr title="Amount you want to reserve for other parts, like: case, fans, storage, PSU, etc.">
                             <td>
-                                Reserved Budget
+                                最低价格
                             </td>
                             <td>
                                 <input name="inputBuildMakerReservedBudget" placeholder="400">
@@ -889,7 +894,7 @@
                         </tr>
                         <tr title="Target 3DMark score.">
                             <td>
-                                Target Score
+                                目标跑分
                             </td>
                             <td>
                                 <input name="inputBuildMakerTarget3DMarkScore">
@@ -897,7 +902,7 @@
                         </tr>
                         <tr title="3DMark score offset, to allow results that have higher 3DMark scores.">
                             <td>
-                                Score Offset
+                                得分+浮动区间
                             </td>
                             <td>
                                 <input name="inputBuildMakerTarget3DMarkScoreOffset" placeholder="400">
@@ -905,7 +910,7 @@
                         </tr>
                         <tr title="# of results to return.">
                             <td>
-                                # Results
+                                # 方案数量
                             </td>
                             <td>
                                 <input name="inputBuildMakerResultsRequested" placeholder="15">
@@ -919,10 +924,10 @@
                         <tr></tr>
                         <tr></tr>
                         <tr></tr>
-                        <tr><td><u>Options:</u></td><td></td></tr>
+                        <tr><td><u>选项:</u></td><td></td></tr>
                         <tr title="Limit to a certain CPU Socket. Useful for targeting Coffee Lake CPUs for higher clocks.">
                             <td>
-                                CPU Socket
+                                CPU 插槽
                             </td>
                             <td>
                                 <select name="selectBuildMakerCpuSocket">
@@ -931,19 +936,19 @@
                         </tr>
                         <tr title="# of GPUs allowed for each result.">
                             <td>
-                                # GPUs
+                                # 显卡数量
                             </td>
                             <td>
                                 <select name="selectBuildMakerGpuCount">
                                     <option selected>Any</option>
-                                    <option value="1">1: Single-GPU</option>
-                                    <option value="2">2: Dual-GPUs</option>
+                                    <option value="1">1: 单显卡</option>
+                                    <option value="2">2: 双显卡</option>
                                 </select>
                             </td>
                         </tr>
                         <tr title="Limit to a certain GPU Type.">
                             <td>
-                                GPU Type
+                                显卡 散热类型
                             </td>
                             <td>
                                 <select name="selectBuildMakerGpuType">
@@ -957,7 +962,7 @@
                         </tr>
                         <tr title="Include the Motherboard in the result set.">
                             <td>
-                                Include Motherboard
+                                包括主板
                             </td>
                             <td>
                                 <input type="checkbox" name="inputBuildMakerIncludeMotherboard" class="bigCheckbox" checked>
@@ -965,7 +970,7 @@
                         </tr>
                         <tr title="Include the Case in the result set.">
                             <td>
-                                Include Case
+                                包括机箱
                             </td>
                             <td>
                                 <input type="checkbox" name="inputBuildMakerIncludeCase" class="bigCheckbox">
@@ -973,7 +978,7 @@
                         </tr>
                         <tr title="Include the RAM part in the result set.">
                             <td>
-                                Include RAM Part
+                                包括内存
                             </td>
                             <td>
                                 <input type="checkbox" name="inputBuildMakerIncludeRamPart" class="bigCheckbox">
@@ -981,7 +986,7 @@
                         </tr>
                         <tr title="Only list CPUs and Motherboards that can be used for overclocking.">
                             <td>
-                                Need CPU Overclock
+                                CPU是否超频
                             </td>
                             <td>
                                 <input type="checkbox" name="inputBuildMakerNeedCpuOverclock" class="bigCheckbox">
@@ -993,7 +998,7 @@
                                 <button type="button" onclick="
                                     BuildMakerGetBuilds();
                                 ">
-                                    Get Builds
+                                    计算
                                 </button>
                             </td>
                         </tr>
@@ -1003,57 +1008,57 @@
             <div id="divBuildMakerResults">
                 <table id="tableBuildMakerResults">
                     <tr>
-                        <td class="tdCase"><b>Case</b></td>
+                        <td class="tdCase"><b>机箱</b></td>
                         <td class="tdCpu"><b>CPU</b></td>
-                        <td class="tdramChannel"><b>#</b></td>
-                        <td class="tdRamSpeed"><b>Speed</b></td>
-                        <td class="tdRamPart"><b>RAM</b></td>
+                        <td class="tdramChannel"><b>数量</b></td>
+                        <td class="tdRamSpeed"><b>频率</b></td>
+                        <td class="tdRamPart"><b>内存</b></td>
                         <td class="tdGpuCount"><b>#</b></td>
-                        <td class="tdGpuType"><b>Type</b></td>
-                        <td class="tdGpuPart"><b>GPU</b></td>
-                        <td class="tdMobo"><b>Motherboard</b></td>
-                        <td class="tdPrice"><b>Price</b></td>
-                        <td class="tdPrice"><b>Remaining</b></td>
-                        <td class="tdScore"><b>Score</b></td>
-                        <td class="tdOther"><b>Watts</b></td>
-                        <td class="tdOther"><b>Save?</b></td>
+                        <td class="tdGpuType"><b>散热类型</b></td>
+                        <td class="tdGpuPart"><b>显卡</b></td>
+                        <td class="tdMobo"><b>主板</b></td>
+                        <td class="tdPrice"><b>总价</b></td>
+                        <td class="tdPrice"><b>剩余预算</b></td>
+                        <td class="tdScore"><b>跑分</b></td>
+                        <td class="tdOther"><b>瓦数</b></td>
+                        <!-- <td class="tdOther"><b>Save?</b></td> -->
                     </tr>
                 </table>
             </div>
-            <div id="divBuildMakerSaveForm">
+            <!-- <div id="divBuildMakerSaveForm">
                 <form id="formBuildMakerSave">
                     <input name="inputBuildMakerSaveFormComment" placeholder="Comment">
                     <button type="button" onclick="ProcessBuildMakerSave(true);">Save</button>
                     <button type="button" onclick="ProcessBuildMakerSave(false);">Cancel</button>
                 </form>
-            </div>
+            </div> -->
         </div>
         <div id="divBuildUpgrader">
             <div id="divBuildUpgraderForm">
                 <form id="formBuildUpgrader" name="formBuildUpgrader">
                     <table>
                         <caption>
-                            Build Upgrader
+                            整机升级助手
                         </caption>
-                        <tr><td><u>Requirements:</u></td><td></td></tr>
+                        <tr><td><u>需求：</u></td><td></td></tr>
                         <tr title="Total amount you can spend.">
-                            <td>Budget</td>
+                            <td>预算</td>
                             <td><input name="inputBuildUpgraderBudget" /></td>
                         </tr>
                         <tr title="Amount you want to reserve for other parts, like: case, fans, storage, PSU, etc.">
-                            <td>Reserved Budget</td>
+                            <td>最低价格</td>
                             <td><input name="inputBuildUpgraderReservedBudget" placeholder="0" /></td>
                         </tr>
                         <tr title="Target 3DMark score.">
-                            <td>Target Score</td>
+                            <td>目标跑分</td>
                             <td><input name="inputBuildUpgraderTarget3DMarkScore" /></td>
                         </tr>
                         <tr title="3DMark score offset, to allow results that have higher 3DMark scores.">
-                            <td>Score Offset</td>
+                            <td>跑分浮动+区间</td>
                             <td><input name="inputBuildUpgraderTarget3DMarkScoreOffset" placeholder="400" /></td>
                         </tr>
                         <tr title="# of results to return.">
-                            <td># Results</td>
+                            <td># 方案数量</td>
                             <td><input name="inputBuildUpgraderResultsRequested" placeholder="200" /></td>
                         </tr>
                         <tr></tr>
@@ -1064,9 +1069,9 @@
                         <tr></tr>
                         <tr></tr>
                         <tr></tr>
-                        <tr><td><u>Original System:</u></td><td></td></tr>
+                        <tr><td><u>(请逐一填写)原配置：</u></td><td></td></tr>
                         <tr>
-                            <td>Case</td>
+                            <td>机箱</td>
                             <td>
                                 <input name="inputBuildUpgraderOriginalSystemCase" list="listCases" onchange="
                                     updateMoboOptionsBuildUpgrader();
@@ -1074,7 +1079,7 @@
                             </td>
                         </tr>
                         <tr title="If the Original System has an M.2, enter it here to ensure compatibility.">
-                            <td>M.2</td>
+                            <td>M.2固态</td>
                             <td>
                                 <input name="inputBuildUpgraderOriginalSystemM2" list="listStorageM2s" onchange="
                                     updateMoboOptionsBuildUpgrader();
@@ -1082,44 +1087,44 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>CPU (Processor)</td>
+                            <td>CPU (中央处理器)</td>
                             <td>
-                                <input name="inputBuildUpgraderOriginalSystemCpu" list="listCpus" value="Intel Celeron G3900" onchange="
+                                <input name="inputBuildUpgraderOriginalSystemCpu" list="listCpus"  onchange="
                                     updateMoboOptionsBuildUpgrader();
                                 ">
                             </td>
                         </tr>
                         <tr>
-                            <td>RAM Speed</td>
+                            <td>内存频率</td>
                             <td>
                                 <select name="selectBuildUpgraderOriginalSystemRamSpeed"></select>
                             </td>
                         </tr>
                         <tr>
-                            <td>RAM Sticks</td>
+                            <td>内存数量</td>
                             <td><input name="inputBuildUpgraderRamSticks" placeholder="1" /></td>
                         </tr>
                         <tr>
-                            <td>GPU (Graphics Card)</td>
+                            <td>GPU (显卡)</td>
                             <td>
-                                <input name="inputBuildUpgraderOriginalSystemGpu" list="listGpus" value="Shean GeForce GTX 750 Ti GAMER" onchange="
+                                <input name="inputBuildUpgraderOriginalSystemGpu" list="listGpus"  onchange="
                                     updateMoboOptionsBuildUpgrader();
                                 ">
                             </td>
                         </tr>
                         <tr>
-                            <td># GPUs</td>
+                            <td># 显卡数量</td>
                             <td>
                                 <select name="selectBuildUpgraderOriginalSystemGpuCount" onchange="
                                     updateMoboOptionsBuildUpgrader();
                                 ">
-                                    <option value="1" selected>1: Single-GPU</option>
-                                    <option value="2">2: Dual-GPUs</option>
+                                    <option value="1" selected>1: 单显卡</option>
+                                    <option value="2">2: 双显卡</option>
                                 </select>
                             </td>
                         </tr>
                         <tr>
-                            <td>Motherboard</td>
+                            <td>主板</td>
                             <td>
                                 <select name="selectBuildUpgraderOriginalSystemMobo">
                                 </select>
@@ -1133,24 +1138,24 @@
                         <tr></tr>
                         <tr></tr>
                         <tr></tr>
-                        <tr><td><u>Options:</u></td><td></td></tr>
+                        <tr><td><u>选项:</u></td><td></td></tr>
                         <tr title="# of GPUs allowed for each result.">
-                            <td># GPUs</td>
+                            <td># 显卡数量</td>
                             <td>
                                 <select name="selectBuildUpgraderOptionsGpuCount">
-                                    <option selected>Any</option>
-                                    <option value="1">1: Single-GPU</option>
-                                    <option value="2">2: Dual-GPUs</option>
+                                    <option selected>不限</option>
+                                    <option value="1">1: 单显卡</option>
+                                    <option value="2">2: D双显卡</option>
                                 </select>
                             </td>
                         </tr>
                         <tr title="Limit to a certain GPU Type.">
                             <td>
-                                GPU Type
+                                显卡散热类型
                             </td>
                             <td>
                                 <select name="selectBuildUpgraderOptionsGpuType">
-                                    <option selected>Any</option>
+                                    <option selected>不限</option>
                                     <option value="风冷">风冷</option>
                                     <option value="水冷">水冷</option>
                                 </select>
@@ -1162,7 +1167,7 @@
                                 <button type="button" onclick="
                                     BuildUpgraderGetUpgrades();
                                 ">
-                                    Get Upgrades
+                                    计算
                                 </button>
                             </td>
                         </tr>
@@ -1176,14 +1181,14 @@
                         <!--<td class="tdramChannel"><b>#</b></td>
                         <td class="tdRamSpeed"><b>Speed</b></td>
                         <td class="tdRamPart"><b>RAM</b></td>-->
-                        <td class="tdGpuCount"><b>#</b></td>
-                        <td class="tdGpuType"><b>Type</b></td>
-                        <td class="tdGpuPart"><b>GPU</b></td>
-                        <td class="tdMobo"><b>Motherboard</b></td>
-                        <td class="tdPrice"><b>Price</b></td>
-                        <td class="tdPrice"><b>Remaining</b></td>
-                        <td class="tdScore"><b>Score</b></td>
-                        <td class="tdOther"><b>Watts</b></td>
+                        <td class="tdGpuCount"><b>数量</b></td>
+                        <td class="tdGpuType"><b>类型</b></td>
+                        <td class="tdGpuPart"><b>显卡</b></td>
+                        <td class="tdMobo"><b>主板</b></td>
+                        <td class="tdPrice"><b>价格</b></td>
+                        <td class="tdPrice"><b>剩余预算</b></td>
+                        <td class="tdScore"><b>跑分</b></td>
+                        <td class="tdOther"><b>功率</b></td>
                     </tr>
                 </table>
             </div>
@@ -1193,19 +1198,19 @@
                 <form id="formPartReplacer" name="formPartReplacer">
                     <table>
                         <caption>
-                            Part Replacer
+                            部件替换助手
                         </caption>
-                        <tr><td><u>Requirements:</u></td><td></td></tr>
+                        <tr><td><u>需求</u></td><td></td></tr>
                         <tr title="Total amount you can spend.">
-                            <td>Budget</td>
+                            <td>预算</td>
                             <td><input name="inputPartReplacerBudget" /></td>
                         </tr>
                         <tr title="Amount you want to reserve for other parts, like: case, fans, storage, PSU, etc.">
-                            <td>Reserved Budget</td>
+                            <td>最低价格</td>
                             <td><input name="inputPartReplacerReservedBudget" placeholder="0" /></td>
                         </tr>
                         <tr title="# of results to return.">
-                            <td># Results</td>
+                            <td># 方案数量</td>
                             <td><input name="inputPartReplacerResultsRequested" placeholder="200" /></td>
                         </tr>
                         <tr></tr>
@@ -1216,9 +1221,9 @@
                         <tr></tr>
                         <tr></tr>
                         <tr></tr>
-                        <tr><td><u>Original System:</u></td><td></td></tr>
+                        <tr><td><u>原配置</u></td><td></td></tr>
                         <tr>
-                            <td>Case</td>
+                            <td>机箱</td>
                             <td>
                                 <input name="inputPartReplacerOriginalSystemCase" list="listCases" onchange="
                                     updateMoboOptionsPartReplacer();
@@ -1226,7 +1231,7 @@
                             </td>
                         </tr>
                         <tr title="If the Original System has an M.2, enter it here to ensure compatibility.">
-                            <td>M.2</td>
+                            <td>M.2硬盘</td>
                             <td>
                                 <input name="inputPartReplacerOriginalSystemM2" list="listStorageM2s" onchange="
                                     updateMoboOptionsPartReplacer();
@@ -1240,7 +1245,7 @@
                         <tr></tr>
                         <tr></tr>
                         <tr>
-                            <td>CPU (Processor)</td>
+                            <td>CPU (中央处理器)</td>
                             <td>
                                 <input name="inputPartReplacerOriginalSystemCpu" list="listCpus" onchange="
                                     updateMoboOptionsPartReplacer();
@@ -1249,12 +1254,12 @@
                         </tr>
                         <tr>
                             <td>
-                                Request
+                                需求
                             </td>
                             <td>
                                 <select name="selectPartReplacerOriginalSystemCpuRequest">
                                     <option selected></option>
-                                    <option value="Fix">Replace / Fix</option>
+                                    <option value="Fix">替换/维修</option>
                                     <option value="Upgrade">Upgrade</option>
                                 </select>
                             </td>
@@ -1266,7 +1271,7 @@
                         <tr></tr>
                         <tr></tr>
                         <tr>
-                            <td>GPU (Graphics Card) 1</td>
+                            <td>GPU (显卡) 1</td>
                             <td>
                                 <input name="inputPartReplacerOriginalSystemGpu1" list="listGpus" onchange="
                                     updateMoboOptionsPartReplacer();
@@ -1275,13 +1280,13 @@
                         </tr>
                         <tr>
                             <td>
-                                Request
+                             需求
                             </td>
                             <td>
                                 <select name="selectPartReplacerOriginalSystemGpu1Request">
                                     <option selected></option>
-                                    <option value="Fix">Replace / Fix</option>
-                                    <option value="Upgrade">Upgrade</option>
+                                    <option value="Fix">替换/维修</option>
+                                    <option value="Upgrade">升级</option>
                                 </select>
                             </td>
                         </tr>
@@ -1292,7 +1297,7 @@
                         <tr></tr>
                         <tr></tr>
                         <tr>
-                            <td>GPU (Graphics Card) 2</td>
+                            <td>GPU (显卡) 2</td>
                             <td>
                                 <input name="inputPartReplacerOriginalSystemGpu2" list="listGpus" onchange="
                                     updateMoboOptionsPartReplacer();
@@ -1301,14 +1306,14 @@
                         </tr>
                         <tr>
                             <td>
-                                Request
+                                需求
                             </td>
                             <td>
                                 <select name="selectPartReplacerOriginalSystemGpu2Request">
                                     <option selected></option>
-                                    <option value="Fix">Replace / Fix</option>
-                                    <option value="Upgrade">Upgrade</option>
-                                    <option value="AddDual">Add Dual-GPU</option>
+                                    <option value="Fix">替换/维修</option>
+                                    <option value="Upgrade">升级</option>
+                                    <option value="AddDual">添加</option>
                                 </select>
                             </td>
                         </tr>
@@ -1319,7 +1324,7 @@
                         <tr></tr>
                         <tr></tr>
                         <tr>
-                            <td>Motherboard</td>
+                            <td>主板</td>
                             <td>
                                 <select name="inputPartReplacerOriginalSystemMobo">
                                 </select>
@@ -1327,12 +1332,12 @@
                         </tr>
                         <tr>
                             <td>
-                                Request
+                                需求
                             </td>
                             <td>
                                 <select name="selectPartReplacerOriginalSystemMoboRequest">
                                     <option selected></option>
-                                    <option value="Fix">Replace / Fix</option>
+                                    <option value="Fix">替换/维修</option>
                                 </select>
                             </td>
                         </tr>
@@ -1350,7 +1355,7 @@
                                 <button type="button" onclick="
                                     PartReplacerGetParts()
                                 ">
-                                    Get Parts
+                                    计算
                                 </button>
                             </td>
                         </tr>
@@ -1361,14 +1366,14 @@
                 <table id="tablePartReplacerResults">
                     <tr>
                         <td class="tdCpu"><b>CPU</b></td>
-                        <td class="tdGpu1Type"><b>Type</b></td>
-                        <td class="tdGpu1Part"><b>GPU 1</b></td>
-                        <td class="tdGpu2Type"><b>Type</b></td>
-                        <td class="tdGpu2Part"><b>GPU 2</b></td>
-                        <td class="tdMobo"><b>Motherboard</b></td>
-                        <td class="tdPrice"><b>Price</b></td>
-                        <td class="tdPrice"><b>Remaining</b></td>
-                        <td class="tdOther"><b>Watts</b></td>
+                        <td class="tdGpu1Type"><b>类型</b></td>
+                        <td class="tdGpu1Part"><b>显卡 2</b></td>
+                        <td class="tdGpu2Type"><b>类型</b></td>
+                        <td class="tdGpu2Part"><b>显卡 2</b></td>
+                        <td class="tdMobo"><b>主板</b></td>
+                        <td class="tdPrice"><b>价格</b></td>
+                        <td class="tdPrice"><b>预算剩余</b></td>
+                        <td class="tdOther"><b>功率</b></td>
                     </tr>
                 </table>
             </div>
@@ -27146,12 +27151,12 @@
                     "singleGPUGraphicsScore": 12450,
                     "doubleGPUGraphicsScore": 21459
                 },
-                "CORS风冷 GeForce RTX 3080 | Cors风冷 Hydro X Series XG7 REFERENCE RGB": {
+                "CORSAIR GeForce RTX 3080 | CorsAIR Hydro X Series XG7 REFERENCE RGB": {
                     "isHEMPart": false,
-                    "fullName": "CORS风冷 GeForce RTX 3080 | Cors风冷 Hydro X Series XG7 REFERENCE RGB",
+                    "fullName": "CORSAIR GeForce RTX 3080 | CorsAIR Hydro X Series XG7 REFERENCE RGB",
                     "gpuType": "水冷",
-                    "manufacturer": "CORS风冷",
-                    "partName": "GeForce RTX 3080 | Cors风冷 Hydro X Series XG7 REFERENCE RGB",
+                    "manufacturer": "CORSAIR",
+                    "partName": "GeForce RTX 3080 | CorsAIR Hydro X Series XG7 REFERENCE RGB",
                     "inShop": "Yes",
                     "price": 1700,
                     "sellPrice": 567,
@@ -27164,7 +27169,7 @@
                     "length": 240,
                     "baseCoreClockFreq": 1710,
                     "baseMemClockFreq": 1188,
-                    "assetPath": "v1_11_0/Prefabs/GPU/Cors风冷/GPU_CORS风冷_Hydro_X_Series_XG7_RGB_30_SERIES_Reference_3080",
+                    "assetPath": "v1_11_0/Prefabs/GPU/CorsAIR/GPU_CORSAIR_Hydro_X_Series_XG7_RGB_30_SERIES_Reference_3080",
                     "GT1SingleCoreClockMultiplier": 0.029755,
                     "GT1SingleMemClockMultiplier": 0.000901,
                     "GT1SingleBenchmarkAdjustment": 44.22204,
@@ -27183,12 +27188,12 @@
                     "singleGPUGraphicsScore": 14685,
                     "doubleGPUGraphicsScore": 0
                 },
-                "CORS风冷 GeForce RTX 3080 | Cors风冷 Hydro X Series XG7 STRIX RGB": {
+                "CORSAIR GeForce RTX 3080 | CorsAIR Hydro X Series XG7 STRIX RGB": {
                     "isHEMPart": false,
-                    "fullName": "CORS风冷 GeForce RTX 3080 | Cors风冷 Hydro X Series XG7 STRIX RGB",
+                    "fullName": "CORSAIR GeForce RTX 3080 | CorsAIR Hydro X Series XG7 STRIX RGB",
                     "gpuType": "水冷",
-                    "manufacturer": "CORS风冷",
-                    "partName": "GeForce RTX 3080 | Cors风冷 Hydro X Series XG7 STRIX RGB",
+                    "manufacturer": "CORSAIR",
+                    "partName": "GeForce RTX 3080 | CorsAIR Hydro X Series XG7 STRIX RGB",
                     "inShop": "Yes",
                     "price": 1700,
                     "sellPrice": 567,
@@ -27201,7 +27206,7 @@
                     "length": 285,
                     "baseCoreClockFreq": 1710,
                     "baseMemClockFreq": 1188,
-                    "assetPath": "v1_11_0/Prefabs/GPU/Cors风冷/GPU_CORS风冷_Hydro_X_Series_XG7_RGB_30_SERIES_STRIX_GPU_水冷_Block_3080",
+                    "assetPath": "v1_11_0/Prefabs/GPU/CorsAIR/GPU_CORSAIR_Hydro_X_Series_XG7_RGB_30_SERIES_STRIX_GPU_水冷_Block_3080",
                     "GT1SingleCoreClockMultiplier": 0.029755,
                     "GT1SingleMemClockMultiplier": 0.000901,
                     "GT1SingleBenchmarkAdjustment": 44.22204,
@@ -27220,12 +27225,12 @@
                     "singleGPUGraphicsScore": 14685,
                     "doubleGPUGraphicsScore": 0
                 },
-                "CORS风冷 GeForce RTX 3090 | Cors风冷 Hydro X Series XG7 STRIX RGB": {
+                "CORSAIR GeForce RTX 3090 | CorsAIR Hydro X Series XG7 STRIX RGB": {
                     "isHEMPart": false,
-                    "fullName": "CORS风冷 GeForce RTX 3090 | Cors风冷 Hydro X Series XG7 STRIX RGB",
+                    "fullName": "CORSAIR GeForce RTX 3090 | CorsAIR Hydro X Series XG7 STRIX RGB",
                     "gpuType": "水冷",
-                    "manufacturer": "CORS风冷",
-                    "partName": "GeForce RTX 3090 | Cors风冷 Hydro X Series XG7 STRIX RGB",
+                    "manufacturer": "CORSAIR",
+                    "partName": "GeForce RTX 3090 | CorsAIR Hydro X Series XG7 STRIX RGB",
                     "inShop": "Yes",
                     "price": 1900,
                     "sellPrice": 633,
@@ -27238,7 +27243,7 @@
                     "length": 285,
                     "baseCoreClockFreq": 1695,
                     "baseMemClockFreq": 1219,
-                    "assetPath": "v1_11_0/Prefabs/GPU/Cors风冷/GPU_CORS风冷_Hydro_X_Series_XG7_RGB_30_SERIES_STRIX_GPU_水冷_Block_3090",
+                    "assetPath": "v1_11_0/Prefabs/GPU/CorsAIR/GPU_CORSAIR_Hydro_X_Series_XG7_RGB_30_SERIES_STRIX_GPU_水冷_Block_3090",
                     "GT1SingleCoreClockMultiplier": 0.025237,
                     "GT1SingleMemClockMultiplier": 0.035803,
                     "GT1SingleBenchmarkAdjustment": 32.83273,
@@ -27257,12 +27262,12 @@
                     "singleGPUGraphicsScore": 18028,
                     "doubleGPUGraphicsScore": 31241
                 },
-                "CORS风冷 GeForce RTX 3090 | Cors风冷 Hydro X Series XG7 REFERENCE RGB": {
+                "CORSAIR GeForce RTX 3090 | CorsAIR Hydro X Series XG7 REFERENCE RGB": {
                     "isHEMPart": false,
-                    "fullName": "CORS风冷 GeForce RTX 3090 | Cors风冷 Hydro X Series XG7 REFERENCE RGB",
+                    "fullName": "CORSAIR GeForce RTX 3090 | CorsAIR Hydro X Series XG7 REFERENCE RGB",
                     "gpuType": "水冷",
-                    "manufacturer": "CORS风冷",
-                    "partName": "GeForce RTX 3090 | Cors风冷 Hydro X Series XG7 REFERENCE RGB",
+                    "manufacturer": "CORSAIR",
+                    "partName": "GeForce RTX 3090 | CorsAIR Hydro X Series XG7 REFERENCE RGB",
                     "inShop": "Yes",
                     "price": 1900,
                     "sellPrice": 633,
@@ -27275,7 +27280,7 @@
                     "length": 240,
                     "baseCoreClockFreq": 1695,
                     "baseMemClockFreq": 1219,
-                    "assetPath": "v1_11_0/Prefabs/GPU/Cors风冷/GPU_CORS风冷_Hydro_X_Series_XG7_RGB_30_SERIES_Reference_3090",
+                    "assetPath": "v1_11_0/Prefabs/GPU/CorsAIR/GPU_CORSAIR_Hydro_X_Series_XG7_RGB_30_SERIES_Reference_3090",
                     "GT1SingleCoreClockMultiplier": 0.025237,
                     "GT1SingleMemClockMultiplier": 0.035803,
                     "GT1SingleBenchmarkAdjustment": 32.83273,
@@ -27294,12 +27299,12 @@
                     "singleGPUGraphicsScore": 18028,
                     "doubleGPUGraphicsScore": 31241
                 },
-                "CORS风冷 Radeon RX 6800 XT | Cors风冷 Hydro Series XG7 RGB": {
+                "CORSAIR Radeon RX 6800 XT | CorsAIR Hydro Series XG7 RGB": {
                     "isHEMPart": false,
-                    "fullName": "CORS风冷 Radeon RX 6800 XT | Cors风冷 Hydro Series XG7 RGB",
+                    "fullName": "CORSAIR Radeon RX 6800 XT | CorsAIR Hydro Series XG7 RGB",
                     "gpuType": "水冷",
-                    "manufacturer": "CORS风冷",
-                    "partName": "Radeon RX 6800 XT | Cors风冷 Hydro Series XG7 RGB",
+                    "manufacturer": "CORSAIR",
+                    "partName": "Radeon RX 6800 XT | CorsAIR Hydro Series XG7 RGB",
                     "inShop": "Yes",
                     "price": 1600,
                     "sellPrice": 533,
@@ -27312,7 +27317,7 @@
                     "length": 263,
                     "baseCoreClockFreq": 1850,
                     "baseMemClockFreq": 2000,
-                    "assetPath": "v1_11_0/Prefabs/GPU/Cors风冷/GPU_CORS风冷_Hydro_X_Series_XG7_RGB_RX_SERIES_GPU_水冷_Block_6800_XT",
+                    "assetPath": "v1_11_0/Prefabs/GPU/CorsAIR/GPU_CORSAIR_Hydro_X_Series_XG7_RGB_RX_SERIES_GPU_水冷_Block_6800_XT",
                     "GT1SingleCoreClockMultiplier": 0.026364,
                     "GT1SingleMemClockMultiplier": 0.000178,
                     "GT1SingleBenchmarkAdjustment": 54.67308,
@@ -27331,12 +27336,12 @@
                     "singleGPUGraphicsScore": 15512,
                     "doubleGPUGraphicsScore": 12949
                 },
-                "CORS风冷 Radeon RX 6900 XT | Cors风冷 Hydro Series XG7 RGB": {
+                "CORSAIR Radeon RX 6900 XT | CorsAIR Hydro Series XG7 RGB": {
                     "isHEMPart": false,
-                    "fullName": "CORS风冷 Radeon RX 6900 XT | Cors风冷 Hydro Series XG7 RGB",
+                    "fullName": "CORSAIR Radeon RX 6900 XT | CorsAIR Hydro Series XG7 RGB",
                     "gpuType": "水冷",
-                    "manufacturer": "CORS风冷",
-                    "partName": "Radeon RX 6900 XT | Cors风冷 Hydro Series XG7 RGB",
+                    "manufacturer": "CORSAIR",
+                    "partName": "Radeon RX 6900 XT | CorsAIR Hydro Series XG7 RGB",
                     "inShop": "Yes",
                     "price": 1700,
                     "sellPrice": 567,
@@ -27349,7 +27354,7 @@
                     "length": 263,
                     "baseCoreClockFreq": 1900,
                     "baseMemClockFreq": 2000,
-                    "assetPath": "v1_11_0/Prefabs/GPU/Cors风冷/GPU_CORS风冷_Hydro_X_Series_XG7_RGB_RX_SERIES_GPU_水冷_Block_6900_XT",
+                    "assetPath": "v1_11_0/Prefabs/GPU/CorsAIR/GPU_CORSAIR_Hydro_X_Series_XG7_RGB_RX_SERIES_GPU_水冷_Block_6900_XT",
                     "GT1SingleCoreClockMultiplier": 0.026054,
                     "GT1SingleMemClockMultiplier": 0.011659,
                     "GT1SingleBenchmarkAdjustment": 38.30114,
@@ -27368,12 +27373,12 @@
                     "singleGPUGraphicsScore": 16501,
                     "doubleGPUGraphicsScore": 20607
                 },
-                "CORS风冷 GeForce RTX 3080 FE | Cors风冷 Hydro X Series XG7 RGB": {
+                "CORSAIR GeForce RTX 3080 FE | CorsAIR Hydro X Series XG7 RGB": {
                     "isHEMPart": false,
-                    "fullName": "CORS风冷 GeForce RTX 3080 FE | Cors风冷 Hydro X Series XG7 RGB",
+                    "fullName": "CORSAIR GeForce RTX 3080 FE | CorsAIR Hydro X Series XG7 RGB",
                     "gpuType": "水冷",
-                    "manufacturer": "CORS风冷",
-                    "partName": "GeForce RTX 3080 FE | Cors风冷 Hydro X Series XG7 RGB",
+                    "manufacturer": "CORSAIR",
+                    "partName": "GeForce RTX 3080 FE | CorsAIR Hydro X Series XG7 RGB",
                     "inShop": "Yes",
                     "price": 1700,
                     "sellPrice": 567,
@@ -27386,7 +27391,7 @@
                     "length": 200,
                     "baseCoreClockFreq": 1710,
                     "baseMemClockFreq": 1188,
-                    "assetPath": "v1_11_0/Prefabs/GPU/Cors风冷/GPU_CORS风冷_Hydro_X_Series_XG7_RGB_30_SERIES_GPU_水冷_Block_3080_FE",
+                    "assetPath": "v1_11_0/Prefabs/GPU/CorsAIR/GPU_CORSAIR_Hydro_X_Series_XG7_RGB_30_SERIES_GPU_水冷_Block_3080_FE",
                     "GT1SingleCoreClockMultiplier": 0.029755,
                     "GT1SingleMemClockMultiplier": 0.000901,
                     "GT1SingleBenchmarkAdjustment": 44.22204,
@@ -27405,12 +27410,12 @@
                     "singleGPUGraphicsScore": 14685,
                     "doubleGPUGraphicsScore": 0
                 },
-                "CORS风冷 GeForce RTX 3090 FE | Cors风冷 Hydro X Series XG7 RGB": {
+                "CORSAIR GeForce RTX 3090 FE | CorsAIR Hydro X Series XG7 RGB": {
                     "isHEMPart": false,
-                    "fullName": "CORS风冷 GeForce RTX 3090 FE | Cors风冷 Hydro X Series XG7 RGB",
+                    "fullName": "CORSAIR GeForce RTX 3090 FE | CorsAIR Hydro X Series XG7 RGB",
                     "gpuType": "水冷",
-                    "manufacturer": "CORS风冷",
-                    "partName": "GeForce RTX 3090 FE | Cors风冷 Hydro X Series XG7 RGB",
+                    "manufacturer": "CORSAIR",
+                    "partName": "GeForce RTX 3090 FE | CorsAIR Hydro X Series XG7 RGB",
                     "inShop": "Yes",
                     "price": 1900,
                     "sellPrice": 633,
@@ -27423,7 +27428,7 @@
                     "length": 200,
                     "baseCoreClockFreq": 1695,
                     "baseMemClockFreq": 1219,
-                    "assetPath": "v1_11_0/Prefabs/GPU/Cors风冷/GPU_CORS风冷_Hydro_X_Series_XG7_RGB_30_SERIES_GPU_水冷_Block_3090_FE",
+                    "assetPath": "v1_11_0/Prefabs/GPU/CorsAIR/GPU_CORSAIR_Hydro_X_Series_XG7_RGB_30_SERIES_GPU_水冷_Block_3090_FE",
                     "GT1SingleCoreClockMultiplier": 0.025237,
                     "GT1SingleMemClockMultiplier": 0.035803,
                     "GT1SingleBenchmarkAdjustment": 32.83273,
@@ -27442,12 +27447,12 @@
                     "singleGPUGraphicsScore": 18028,
                     "doubleGPUGraphicsScore": 31241
                 },
-                "CORS风冷 GeForce RTX 3080 | Cors风冷 Hydro X Series XG7 VENTUS RGB": {
+                "CORSAIR GeForce RTX 3080 | CorsAIR Hydro X Series XG7 VENTUS RGB": {
                     "isHEMPart": false,
-                    "fullName": "CORS风冷 GeForce RTX 3080 | Cors风冷 Hydro X Series XG7 VENTUS RGB",
+                    "fullName": "CORSAIR GeForce RTX 3080 | CorsAIR Hydro X Series XG7 VENTUS RGB",
                     "gpuType": "水冷",
-                    "manufacturer": "CORS风冷",
-                    "partName": "GeForce RTX 3080 | Cors风冷 Hydro X Series XG7 VENTUS RGB",
+                    "manufacturer": "CORSAIR",
+                    "partName": "GeForce RTX 3080 | CorsAIR Hydro X Series XG7 VENTUS RGB",
                     "inShop": "Yes",
                     "price": 1700,
                     "sellPrice": 567,
@@ -27460,7 +27465,7 @@
                     "length": 258,
                     "baseCoreClockFreq": 1710,
                     "baseMemClockFreq": 1188,
-                    "assetPath": "v1_11_0/Prefabs/GPU/Cors风冷/GPU_CORS风冷_Hydro_X_Series_XG7_RGB_30_SERIES_VENTUS_GPU_水冷_Block_3080",
+                    "assetPath": "v1_11_0/Prefabs/GPU/CorsAIR/GPU_CORSAIR_Hydro_X_Series_XG7_RGB_30_SERIES_VENTUS_GPU_水冷_Block_3080",
                     "GT1SingleCoreClockMultiplier": 0.029755,
                     "GT1SingleMemClockMultiplier": 0.000901,
                     "GT1SingleBenchmarkAdjustment": 44.22204,
@@ -27479,12 +27484,12 @@
                     "singleGPUGraphicsScore": 14685,
                     "doubleGPUGraphicsScore": 0
                 },
-                "CORS风冷 GeForce RTX 3090 | Cors风冷 Hydro X Series XG7 VENTUS RGB": {
+                "CORSAIR GeForce RTX 3090 | CorsAIR Hydro X Series XG7 VENTUS RGB": {
                     "isHEMPart": false,
-                    "fullName": "CORS风冷 GeForce RTX 3090 | Cors风冷 Hydro X Series XG7 VENTUS RGB",
+                    "fullName": "CORSAIR GeForce RTX 3090 | CorsAIR Hydro X Series XG7 VENTUS RGB",
                     "gpuType": "水冷",
-                    "manufacturer": "CORS风冷",
-                    "partName": "GeForce RTX 3090 | Cors风冷 Hydro X Series XG7 VENTUS RGB",
+                    "manufacturer": "CORSAIR",
+                    "partName": "GeForce RTX 3090 | CorsAIR Hydro X Series XG7 VENTUS RGB",
                     "inShop": "Yes",
                     "price": 1900,
                     "sellPrice": 633,
@@ -27497,7 +27502,7 @@
                     "length": 258,
                     "baseCoreClockFreq": 1695,
                     "baseMemClockFreq": 1219,
-                    "assetPath": "v1_11_0/Prefabs/GPU/Cors风冷/GPU_CORS风冷_Hydro_X_Series_XG7_RGB_30_SERIES_VENTUS_GPU_水冷_Block_3090",
+                    "assetPath": "v1_11_0/Prefabs/GPU/CorsAIR/GPU_CORSAIR_Hydro_X_Series_XG7_RGB_30_SERIES_VENTUS_GPU_水冷_Block_3090",
                     "GT1SingleCoreClockMultiplier": 0.025237,
                     "GT1SingleMemClockMultiplier": 0.035803,
                     "GT1SingleBenchmarkAdjustment": 32.83273,
@@ -27516,12 +27521,12 @@
                     "singleGPUGraphicsScore": 18028,
                     "doubleGPUGraphicsScore": 31241
                 },
-                "CORS风冷 GeForce RTX 3070 | Cors风冷 Hydro X Series XG7 STRIX RGB": {
+                "CORSAIR GeForce RTX 3070 | CorsAIR Hydro X Series XG7 STRIX RGB": {
                     "isHEMPart": false,
-                    "fullName": "CORS风冷 GeForce RTX 3070 | Cors风冷 Hydro X Series XG7 STRIX RGB",
+                    "fullName": "CORSAIR GeForce RTX 3070 | CorsAIR Hydro X Series XG7 STRIX RGB",
                     "gpuType": "水冷",
-                    "manufacturer": "CORS风冷",
-                    "partName": "GeForce RTX 3070 | Cors风冷 Hydro X Series XG7 STRIX RGB",
+                    "manufacturer": "CORSAIR",
+                    "partName": "GeForce RTX 3070 | CorsAIR Hydro X Series XG7 STRIX RGB",
                     "inShop": "Yes",
                     "price": 1450,
                     "sellPrice": 483,
@@ -27534,7 +27539,7 @@
                     "length": 285,
                     "baseCoreClockFreq": 1725,
                     "baseMemClockFreq": 1750,
-                    "assetPath": "v1_11_0/Prefabs/GPU/Cors风冷/GPU_CORS风冷_Hydro_X_Series_XG7_RGB_30_SERIES_STRIX_GPU_水冷_Block_3070",
+                    "assetPath": "v1_11_0/Prefabs/GPU/CorsAIR/GPU_CORSAIR_Hydro_X_Series_XG7_RGB_30_SERIES_STRIX_GPU_水冷_Block_3070",
                     "GT1SingleCoreClockMultiplier": 0.036679,
                     "GT1SingleMemClockMultiplier": 0.000247,
                     "GT1SingleBenchmarkAdjustment": 16.66125,
@@ -54595,10 +54600,10 @@
                     "ramType": "DDR4",
                     "frequency": 3600
                 },
-                "CORS风冷 Dominator Platinum 8 GB 3733 MHz": {
+                "CORSAIR Dominator Platinum 8 GB 3733 MHz": {
                     "isHEMPart": false,
-                    "fullName": "CORS风冷 Dominator Platinum 8 GB 3733 MHz",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR Dominator Platinum 8 GB 3733 MHz",
+                    "manufacturer": "CORSAIR",
                     "partName": "Dominator Platinum",
                     "inShop": "Yes",
                     "price": 135,
@@ -54609,10 +54614,10 @@
                     "ramType": "DDR4",
                     "frequency": 3733
                 },
-                "CORS风冷 Dominator Platinum 8 GB 3200 MHz": {
+                "CORSAIR Dominator Platinum 8 GB 3200 MHz": {
                     "isHEMPart": false,
-                    "fullName": "CORS风冷 Dominator Platinum 8 GB 3200 MHz",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR Dominator Platinum 8 GB 3200 MHz",
+                    "manufacturer": "CORSAIR",
                     "partName": "Dominator Platinum",
                     "inShop": "Yes",
                     "price": 115,
@@ -54623,10 +54628,10 @@
                     "ramType": "DDR4",
                     "frequency": 3200
                 },
-                "CORS风冷 Dominator Platinum 4 GB 2666 MHz": {
+                "CORSAIR Dominator Platinum 4 GB 2666 MHz": {
                     "isHEMPart": false,
-                    "fullName": "CORS风冷 Dominator Platinum 4 GB 2666 MHz",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR Dominator Platinum 4 GB 2666 MHz",
+                    "manufacturer": "CORSAIR",
                     "partName": "Dominator Platinum",
                     "inShop": "Yes",
                     "price": 50,
@@ -54637,10 +54642,10 @@
                     "ramType": "DDR4",
                     "frequency": 2666
                 },
-                "CORS风冷 Dominator Platinum 8 GB 3000 MHz": {
+                "CORSAIR Dominator Platinum 8 GB 3000 MHz": {
                     "isHEMPart": false,
-                    "fullName": "CORS风冷 Dominator Platinum 8 GB 3000 MHz",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR Dominator Platinum 8 GB 3000 MHz",
+                    "manufacturer": "CORSAIR",
                     "partName": "Dominator Platinum",
                     "inShop": "Yes",
                     "price": 105,
@@ -54651,10 +54656,10 @@
                     "ramType": "DDR4",
                     "frequency": 3000
                 },
-                "CORS风冷 Dominator Platinum 8 GB 2400 MHz": {
+                "CORSAIR Dominator Platinum 8 GB 2400 MHz": {
                     "isHEMPart": false,
-                    "fullName": "CORS风冷 Dominator Platinum 8 GB 2400 MHz",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR Dominator Platinum 8 GB 2400 MHz",
+                    "manufacturer": "CORSAIR",
                     "partName": "Dominator Platinum",
                     "inShop": "Yes",
                     "price": 75,
@@ -54665,10 +54670,10 @@
                     "ramType": "DDR4",
                     "frequency": 2400
                 },
-                "CORS风冷 Dominator Platinum 8 GB 2666 MHz": {
+                "CORSAIR Dominator Platinum 8 GB 2666 MHz": {
                     "isHEMPart": false,
-                    "fullName": "CORS风冷 Dominator Platinum 8 GB 2666 MHz",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR Dominator Platinum 8 GB 2666 MHz",
+                    "manufacturer": "CORSAIR",
                     "partName": "Dominator Platinum",
                     "inShop": "Yes",
                     "price": 85,
@@ -54679,10 +54684,10 @@
                     "ramType": "DDR4",
                     "frequency": 2666
                 },
-                "CORS风冷 Dominator Platinum 16 GB 2666 MHz": {
+                "CORSAIR Dominator Platinum 16 GB 2666 MHz": {
                     "isHEMPart": false,
-                    "fullName": "CORS风冷 Dominator Platinum 16 GB 2666 MHz",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR Dominator Platinum 16 GB 2666 MHz",
+                    "manufacturer": "CORSAIR",
                     "partName": "Dominator Platinum",
                     "inShop": "Yes",
                     "price": 155,
@@ -54693,10 +54698,10 @@
                     "ramType": "DDR4",
                     "frequency": 2666
                 },
-                "CORS风冷 Dominator Platinum 4 GB 4000 MHz": {
+                "CORSAIR Dominator Platinum 4 GB 4000 MHz": {
                     "isHEMPart": false,
-                    "fullName": "CORS风冷 Dominator Platinum 4 GB 4000 MHz",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR Dominator Platinum 4 GB 4000 MHz",
+                    "manufacturer": "CORSAIR",
                     "partName": "Dominator Platinum",
                     "inShop": "Yes",
                     "price": 80,
@@ -54707,10 +54712,10 @@
                     "ramType": "DDR4",
                     "frequency": 4000
                 },
-                "CORS风冷 Dominator Platinum 4 GB 3000 MHz": {
+                "CORSAIR Dominator Platinum 4 GB 3000 MHz": {
                     "isHEMPart": false,
-                    "fullName": "CORS风冷 Dominator Platinum 4 GB 3000 MHz",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR Dominator Platinum 4 GB 3000 MHz",
+                    "manufacturer": "CORSAIR",
                     "partName": "Dominator Platinum",
                     "inShop": "Yes",
                     "price": 60,
@@ -54721,10 +54726,10 @@
                     "ramType": "DDR4",
                     "frequency": 3000
                 },
-                "CORS风冷 Dominator Platinum 8 GB 3600 MHz": {
+                "CORSAIR Dominator Platinum 8 GB 3600 MHz": {
                     "isHEMPart": false,
-                    "fullName": "CORS风冷 Dominator Platinum 8 GB 3600 MHz",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR Dominator Platinum 8 GB 3600 MHz",
+                    "manufacturer": "CORSAIR",
                     "partName": "Dominator Platinum",
                     "inShop": "Yes",
                     "price": 125,
@@ -54735,10 +54740,10 @@
                     "ramType": "DDR4",
                     "frequency": 3600
                 },
-                "CORS风冷 Dominator Platinum 4 GB 3200 MHz": {
+                "CORSAIR Dominator Platinum 4 GB 3200 MHz": {
                     "isHEMPart": false,
-                    "fullName": "CORS风冷 Dominator Platinum 4 GB 3200 MHz",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR Dominator Platinum 4 GB 3200 MHz",
+                    "manufacturer": "CORSAIR",
                     "partName": "Dominator Platinum",
                     "inShop": "Yes",
                     "price": 65,
@@ -54749,10 +54754,10 @@
                     "ramType": "DDR4",
                     "frequency": 3200
                 },
-                "CORS风冷 Dominator Platinum 16 GB 2400 MHz": {
+                "CORSAIR Dominator Platinum 16 GB 2400 MHz": {
                     "isHEMPart": false,
-                    "fullName": "CORS风冷 Dominator Platinum 16 GB 2400 MHz",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR Dominator Platinum 16 GB 2400 MHz",
+                    "manufacturer": "CORSAIR",
                     "partName": "Dominator Platinum",
                     "inShop": "Yes",
                     "price": 135,
@@ -54763,10 +54768,10 @@
                     "ramType": "DDR4",
                     "frequency": 2400
                 },
-                "CORS风冷 Dominator Platinum 16 GB 2800 MHz": {
+                "CORSAIR Dominator Platinum 16 GB 2800 MHz": {
                     "isHEMPart": false,
-                    "fullName": "CORS风冷 Dominator Platinum 16 GB 2800 MHz",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR Dominator Platinum 16 GB 2800 MHz",
+                    "manufacturer": "CORSAIR",
                     "partName": "Dominator Platinum",
                     "inShop": "Yes",
                     "price": 175,
@@ -54777,10 +54782,10 @@
                     "ramType": "DDR4",
                     "frequency": 2800
                 },
-                "CORS风冷 Dominator Platinum 8 GB 2800 MHz": {
+                "CORSAIR Dominator Platinum 8 GB 2800 MHz": {
                     "isHEMPart": false,
-                    "fullName": "CORS风冷 Dominator Platinum 8 GB 2800 MHz",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR Dominator Platinum 8 GB 2800 MHz",
+                    "manufacturer": "CORSAIR",
                     "partName": "Dominator Platinum",
                     "inShop": "Yes",
                     "price": 95,
@@ -54791,10 +54796,10 @@
                     "ramType": "DDR4",
                     "frequency": 2800
                 },
-                "CORS风冷 VENGEANCE RGB PRO (Black) 8 GB 4000 MHz": {
+                "CORSAIR VENGEANCE RGB PRO (Black) 8 GB 4000 MHz": {
                     "isHEMPart": false,
-                    "fullName": "CORS风冷 VENGEANCE RGB PRO (Black) 8 GB 4000 MHz",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR VENGEANCE RGB PRO (Black) 8 GB 4000 MHz",
+                    "manufacturer": "CORSAIR",
                     "partName": "VENGEANCE RGB PRO (Black)",
                     "inShop": "Yes",
                     "price": 150,
@@ -54805,10 +54810,10 @@
                     "ramType": "DDR4",
                     "frequency": 4000
                 },
-                "CORS风冷 VENGEANCE RGB PRO (White) 8 GB 3600 MHz": {
+                "CORSAIR VENGEANCE RGB PRO (White) 8 GB 3600 MHz": {
                     "isHEMPart": false,
-                    "fullName": "CORS风冷 VENGEANCE RGB PRO (White) 8 GB 3600 MHz",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR VENGEANCE RGB PRO (White) 8 GB 3600 MHz",
+                    "manufacturer": "CORSAIR",
                     "partName": "VENGEANCE RGB PRO (White)",
                     "inShop": "Yes",
                     "price": 130,
@@ -54819,10 +54824,10 @@
                     "ramType": "DDR4",
                     "frequency": 3600
                 },
-                "CORS风冷 VENGEANCE RGB PRO (Black) 8 GB 4266 MHz": {
+                "CORSAIR VENGEANCE RGB PRO (Black) 8 GB 4266 MHz": {
                     "isHEMPart": false,
-                    "fullName": "CORS风冷 VENGEANCE RGB PRO (Black) 8 GB 4266 MHz",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR VENGEANCE RGB PRO (Black) 8 GB 4266 MHz",
+                    "manufacturer": "CORSAIR",
                     "partName": "VENGEANCE RGB PRO (Black)",
                     "inShop": "Yes",
                     "price": 190,
@@ -54833,10 +54838,10 @@
                     "ramType": "DDR4",
                     "frequency": 4266
                 },
-                "CORS风冷 VENGEANCE RGB PRO (Black) 8 GB 4700 MHz": {
+                "CORSAIR VENGEANCE RGB PRO (Black) 8 GB 4700 MHz": {
                     "isHEMPart": false,
-                    "fullName": "CORS风冷 VENGEANCE RGB PRO (Black) 8 GB 4700 MHz",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR VENGEANCE RGB PRO (Black) 8 GB 4700 MHz",
+                    "manufacturer": "CORSAIR",
                     "partName": "VENGEANCE RGB PRO (Black)",
                     "inShop": "Yes",
                     "price": 370,
@@ -54847,10 +54852,10 @@
                     "ramType": "DDR4",
                     "frequency": 4700
                 },
-                "CORS风冷 VENGEANCE RGB PRO (Black) 8 GB 3600 MHz": {
+                "CORSAIR VENGEANCE RGB PRO (Black) 8 GB 3600 MHz": {
                     "isHEMPart": false,
-                    "fullName": "CORS风冷 VENGEANCE RGB PRO (Black) 8 GB 3600 MHz",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR VENGEANCE RGB PRO (Black) 8 GB 3600 MHz",
+                    "manufacturer": "CORSAIR",
                     "partName": "VENGEANCE RGB PRO (Black)",
                     "inShop": "Yes",
                     "price": 130,
@@ -54861,10 +54866,10 @@
                     "ramType": "DDR4",
                     "frequency": 3600
                 },
-                "CORS风冷 VENGEANCE RGB PRO (White) 8 GB 3200 MHz": {
+                "CORSAIR VENGEANCE RGB PRO (White) 8 GB 3200 MHz": {
                     "isHEMPart": false,
-                    "fullName": "CORS风冷 VENGEANCE RGB PRO (White) 8 GB 3200 MHz",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR VENGEANCE RGB PRO (White) 8 GB 3200 MHz",
+                    "manufacturer": "CORSAIR",
                     "partName": "VENGEANCE RGB PRO (White)",
                     "inShop": "Yes",
                     "price": 120,
@@ -54875,10 +54880,10 @@
                     "ramType": "DDR4",
                     "frequency": 3200
                 },
-                "CORS风冷 VENGEANCE RGB PRO (White) 8 GB 3000 MHz": {
+                "CORSAIR VENGEANCE RGB PRO (White) 8 GB 3000 MHz": {
                     "isHEMPart": false,
-                    "fullName": "CORS风冷 VENGEANCE RGB PRO (White) 8 GB 3000 MHz",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR VENGEANCE RGB PRO (White) 8 GB 3000 MHz",
+                    "manufacturer": "CORSAIR",
                     "partName": "VENGEANCE RGB PRO (White)",
                     "inShop": "Yes",
                     "price": 110,
@@ -54889,10 +54894,10 @@
                     "ramType": "DDR4",
                     "frequency": 3000
                 },
-                "CORS风冷 VENGEANCE RGB PRO (White) 8 GB 2666 MHz": {
+                "CORSAIR VENGEANCE RGB PRO (White) 8 GB 2666 MHz": {
                     "isHEMPart": false,
-                    "fullName": "CORS风冷 VENGEANCE RGB PRO (White) 8 GB 2666 MHz",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR VENGEANCE RGB PRO (White) 8 GB 2666 MHz",
+                    "manufacturer": "CORSAIR",
                     "partName": "VENGEANCE RGB PRO (White)",
                     "inShop": "Yes",
                     "price": 90,
@@ -54903,10 +54908,10 @@
                     "ramType": "DDR4",
                     "frequency": 2666
                 },
-                "CORS风冷 Dominator Platinum Special Edition CONTRAST 8 GB 3466 MHz": {
+                "CORSAIR Dominator Platinum Special Edition CONTRAST 8 GB 3466 MHz": {
                     "isHEMPart": false,
-                    "fullName": "CORS风冷 Dominator Platinum Special Edition CONTRAST 8 GB 3466 MHz",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR Dominator Platinum Special Edition CONTRAST 8 GB 3466 MHz",
+                    "manufacturer": "CORSAIR",
                     "partName": "Dominator Platinum Special Edition CONTRAST",
                     "inShop": "Yes",
                     "price": 123,
@@ -54917,10 +54922,10 @@
                     "ramType": "DDR4",
                     "frequency": 3466
                 },
-                "CORS风冷 Dominator Platinum 16 GB 3200 MHz": {
+                "CORSAIR Dominator Platinum 16 GB 3200 MHz": {
                     "isHEMPart": false,
-                    "fullName": "CORS风冷 Dominator Platinum 16 GB 3200 MHz",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR Dominator Platinum 16 GB 3200 MHz",
+                    "manufacturer": "CORSAIR",
                     "partName": "Dominator Platinum",
                     "inShop": "Yes",
                     "price": 215,
@@ -54931,10 +54936,10 @@
                     "ramType": "DDR4",
                     "frequency": 3200
                 },
-                "CORS风冷 Dominator Platinum 16 GB 3000 MHz": {
+                "CORSAIR Dominator Platinum 16 GB 3000 MHz": {
                     "isHEMPart": false,
-                    "fullName": "CORS风冷 Dominator Platinum 16 GB 3000 MHz",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR Dominator Platinum 16 GB 3000 MHz",
+                    "manufacturer": "CORSAIR",
                     "partName": "Dominator Platinum",
                     "inShop": "Yes",
                     "price": 195,
@@ -58403,10 +58408,10 @@
                     "ramType": "DDR4",
                     "frequency": 3866
                 },
-                "CORS风冷 VENGEANCE RGB PRO (White) 8 GB 4000 MHz": {
+                "CORSAIR VENGEANCE RGB PRO (White) 8 GB 4000 MHz": {
                     "isHEMPart": true,
-                    "fullName": "CORS风冷 VENGEANCE RGB PRO (White) 8 GB 4000 MHz",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR VENGEANCE RGB PRO (White) 8 GB 4000 MHz",
+                    "manufacturer": "CORSAIR",
                     "partName": "VENGEANCE RGB PRO (White)",
                     "inShop": "Yes",
                     "price": 150,
@@ -58417,10 +58422,10 @@
                     "ramType": "DDR4",
                     "frequency": 4000
                 },
-                "CORS风冷 VENGEANCE RGB PRO (White) 8 GB 4266 MHz": {
+                "CORSAIR VENGEANCE RGB PRO (White) 8 GB 4266 MHz": {
                     "isHEMPart": true,
-                    "fullName": "CORS风冷 VENGEANCE RGB PRO (White) 8 GB 4266 MHz",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR VENGEANCE RGB PRO (White) 8 GB 4266 MHz",
+                    "manufacturer": "CORSAIR",
                     "partName": "VENGEANCE RGB PRO (White)",
                     "inShop": "Yes",
                     "price": 190,
@@ -58431,10 +58436,10 @@
                     "ramType": "DDR4",
                     "frequency": 4266
                 },
-                "CORS风冷 VENGEANCE RGB PRO (White) 8 GB 4700 MHz": {
+                "CORSAIR VENGEANCE RGB PRO (White) 8 GB 4700 MHz": {
                     "isHEMPart": true,
-                    "fullName": "CORS风冷 VENGEANCE RGB PRO (White) 8 GB 4700 MHz",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR VENGEANCE RGB PRO (White) 8 GB 4700 MHz",
+                    "manufacturer": "CORSAIR",
                     "partName": "VENGEANCE RGB PRO (White)",
                     "inShop": "Yes",
                     "price": 370,
@@ -60685,10 +60690,10 @@
                     "ramType": "DDR5",
                     "frequency": 9000
                 },
-                "CORS风冷 Dominator Platinum DDR5 8 GB 9400 MHz": {
+                "CORSAIR Dominator Platinum DDR5 8 GB 9400 MHz": {
                     "isHEMPart": true,
-                    "fullName": "CORS风冷 Dominator Platinum DDR5 8 GB 9400 MHz",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR Dominator Platinum DDR5 8 GB 9400 MHz",
+                    "manufacturer": "CORSAIR",
                     "partName": "Dominator Platinum DDR5",
                     "inShop": "Yes",
                     "price": 1055,
@@ -60699,10 +60704,10 @@
                     "ramType": "DDR5",
                     "frequency": 9400
                 },
-                "CORS风冷 Dominator Platinum DDR5 16 GB 9400 MHz": {
+                "CORSAIR Dominator Platinum DDR5 16 GB 9400 MHz": {
                     "isHEMPart": true,
-                    "fullName": "CORS风冷 Dominator Platinum DDR5 16 GB 9400 MHz",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR Dominator Platinum DDR5 16 GB 9400 MHz",
+                    "manufacturer": "CORSAIR",
                     "partName": "Dominator Platinum DDR5",
                     "inShop": "Yes",
                     "price": 1145,
@@ -60713,10 +60718,10 @@
                     "ramType": "DDR5",
                     "frequency": 9400
                 },
-                "CORS风冷 Dominator Platinum DDR5 CONTRAST 8 GB 9800 MHz": {
+                "CORSAIR Dominator Platinum DDR5 CONTRAST 8 GB 9800 MHz": {
                     "isHEMPart": true,
-                    "fullName": "CORS风冷 Dominator Platinum DDR5 CONTRAST 8 GB 9800 MHz",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR Dominator Platinum DDR5 CONTRAST 8 GB 9800 MHz",
+                    "manufacturer": "CORSAIR",
                     "partName": "Dominator Platinum DDR5 CONTRAST",
                     "inShop": "Yes",
                     "price": 1100,
@@ -64666,10 +64671,10 @@
                     "maxRadiatorLength140mm": 2,
                     "isDlc": "No"
                 },
-                "CORS风冷 Crystal Series 570X RGB": {
+                "CORSAIR Crystal Series 570X RGB": {
                     "isHEMPart": false,
-                    "fullName": "CORS风冷 Crystal Series 570X RGB",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR Crystal Series 570X RGB",
+                    "manufacturer": "CORSAIR",
                     "partName": "Crystal Series 570X RGB",
                     "inShop": "Yes",
                     "price": 180,
@@ -64687,10 +64692,10 @@
                     "maxRadiatorLength140mm": 2,
                     "isDlc": "No"
                 },
-                "CORS风冷 Graphite Series 380T (Yellow)": {
+                "CORSAIR Graphite Series 380T (Yellow)": {
                     "isHEMPart": false,
-                    "fullName": "CORS风冷 Graphite Series 380T (Yellow)",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR Graphite Series 380T (Yellow)",
+                    "manufacturer": "CORSAIR",
                     "partName": "Graphite Series 380T (Yellow)",
                     "inShop": "Yes",
                     "price": 110,
@@ -64708,10 +64713,10 @@
                     "maxRadiatorLength140mm": 0,
                     "isDlc": "No"
                 },
-                "CORS风冷 Graphite Series 380T (White)": {
+                "CORSAIR Graphite Series 380T (White)": {
                     "isHEMPart": false,
-                    "fullName": "CORS风冷 Graphite Series 380T (White)",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR Graphite Series 380T (White)",
+                    "manufacturer": "CORSAIR",
                     "partName": "Graphite Series 380T (White)",
                     "inShop": "Yes",
                     "price": 110,
@@ -64729,10 +64734,10 @@
                     "maxRadiatorLength140mm": 0,
                     "isDlc": "No"
                 },
-                "CORS风冷 Obsidian Series 1000D": {
+                "CORSAIR Obsidian Series 1000D": {
                     "isHEMPart": false,
-                    "fullName": "CORS风冷 Obsidian Series 1000D",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR Obsidian Series 1000D",
+                    "manufacturer": "CORSAIR",
                     "partName": "Obsidian Series 1000D",
                     "inShop": "Yes",
                     "price": 500,
@@ -64750,10 +64755,10 @@
                     "maxRadiatorLength140mm": 3,
                     "isDlc": "No"
                 },
-                "CORS风冷 Obsidian Series 900D": {
+                "CORSAIR Obsidian Series 900D": {
                     "isHEMPart": false,
-                    "fullName": "CORS风冷 Obsidian Series 900D",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR Obsidian Series 900D",
+                    "manufacturer": "CORSAIR",
                     "partName": "Obsidian Series 900D",
                     "inShop": "Yes",
                     "price": 360,
@@ -64771,10 +64776,10 @@
                     "maxRadiatorLength140mm": 3,
                     "isDlc": "No"
                 },
-                "CORS风冷 Obsidian Series 750D": {
+                "CORSAIR Obsidian Series 750D": {
                     "isHEMPart": false,
-                    "fullName": "CORS风冷 Obsidian Series 750D",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR Obsidian Series 750D",
+                    "manufacturer": "CORSAIR",
                     "partName": "Obsidian Series 750D",
                     "inShop": "Yes",
                     "price": 160,
@@ -64792,10 +64797,10 @@
                     "maxRadiatorLength140mm": 3,
                     "isDlc": "No"
                 },
-                "CORS风冷 Crystal Series 280X RGB (White)": {
+                "CORSAIR Crystal Series 280X RGB (White)": {
                     "isHEMPart": false,
-                    "fullName": "CORS风冷 Crystal Series 280X RGB (White)",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR Crystal Series 280X RGB (White)",
+                    "manufacturer": "CORSAIR",
                     "partName": "Crystal Series 280X RGB (White)",
                     "inShop": "Yes",
                     "price": 160,
@@ -64813,10 +64818,10 @@
                     "maxRadiatorLength140mm": 2,
                     "isDlc": "No"
                 },
-                "CORS风冷 Crystal Series 280X RGB (Black)": {
+                "CORSAIR Crystal Series 280X RGB (Black)": {
                     "isHEMPart": false,
-                    "fullName": "CORS风冷 Crystal Series 280X RGB (Black)",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR Crystal Series 280X RGB (Black)",
+                    "manufacturer": "CORSAIR",
                     "partName": "Crystal Series 280X RGB (Black)",
                     "inShop": "Yes",
                     "price": 160,
@@ -64834,10 +64839,10 @@
                     "maxRadiatorLength140mm": 2,
                     "isDlc": "No"
                 },
-                "CORS风冷 Carbide Series SPEC-DELTA RGB": {
+                "CORSAIR Carbide Series SPEC-DELTA RGB": {
                     "isHEMPart": false,
-                    "fullName": "CORS风冷 Carbide Series SPEC-DELTA RGB",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR Carbide Series SPEC-DELTA RGB",
+                    "manufacturer": "CORSAIR",
                     "partName": "Carbide Series SPEC-DELTA RGB",
                     "inShop": "Yes",
                     "price": 90,
@@ -64855,10 +64860,10 @@
                     "maxRadiatorLength140mm": 2,
                     "isDlc": "No"
                 },
-                "CORS风冷 Carbide SPEC-06 RGB (Black)": {
+                "CORSAIR Carbide SPEC-06 RGB (Black)": {
                     "isHEMPart": false,
-                    "fullName": "CORS风冷 Carbide SPEC-06 RGB (Black)",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR Carbide SPEC-06 RGB (Black)",
+                    "manufacturer": "CORSAIR",
                     "partName": "Carbide SPEC-06 RGB (Black)",
                     "inShop": "Yes",
                     "price": 100,
@@ -64876,10 +64881,10 @@
                     "maxRadiatorLength140mm": 2,
                     "isDlc": "No"
                 },
-                "CORS风冷 Carbide SPEC-06 RGB (White)": {
+                "CORSAIR Carbide SPEC-06 RGB (White)": {
                     "isHEMPart": false,
-                    "fullName": "CORS风冷 Carbide SPEC-06 RGB (White)",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR Carbide SPEC-06 RGB (White)",
+                    "manufacturer": "CORSAIR",
                     "partName": "Carbide SPEC-06 RGB (White)",
                     "inShop": "Yes",
                     "price": 100,
@@ -64897,10 +64902,10 @@
                     "maxRadiatorLength140mm": 2,
                     "isDlc": "No"
                 },
-                "CORS风冷 Obsidian Series 500D": {
+                "CORSAIR Obsidian Series 500D": {
                     "isHEMPart": false,
-                    "fullName": "CORS风冷 Obsidian Series 500D",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR Obsidian Series 500D",
+                    "manufacturer": "CORSAIR",
                     "partName": "Obsidian Series 500D",
                     "inShop": "Yes",
                     "price": 150,
@@ -64918,10 +64923,10 @@
                     "maxRadiatorLength140mm": 2,
                     "isDlc": "No"
                 },
-                "CORS风冷 Carbide Series 175R RGB": {
+                "CORSAIR Carbide Series 175R RGB": {
                     "isHEMPart": false,
-                    "fullName": "CORS风冷 Carbide Series 175R RGB",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR Carbide Series 175R RGB",
+                    "manufacturer": "CORSAIR",
                     "partName": "Carbide Series 175R RGB",
                     "inShop": "Yes",
                     "price": 85,
@@ -64939,10 +64944,10 @@
                     "maxRadiatorLength140mm": 2,
                     "isDlc": "Yes"
                 },
-                "CORS风冷 iCUE 220T RGB 风冷flow (White)": {
+                "CORSAIR iCUE 220T RGB 风冷flow (White)": {
                     "isHEMPart": false,
-                    "fullName": "CORS风冷 iCUE 220T RGB 风冷flow (White)",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR iCUE 220T RGB 风冷flow (White)",
+                    "manufacturer": "CORSAIR",
                     "partName": "iCUE 220T RGB 风冷flow (White)",
                     "inShop": "Yes",
                     "price": 120,
@@ -64960,10 +64965,10 @@
                     "maxRadiatorLength140mm": 2,
                     "isDlc": "No"
                 },
-                "CORS风冷 iCUE 220T RGB 风冷flow (Black)": {
+                "CORSAIR iCUE 220T RGB 风冷flow (Black)": {
                     "isHEMPart": false,
-                    "fullName": "CORS风冷 iCUE 220T RGB 风冷flow (Black)",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR iCUE 220T RGB 风冷flow (Black)",
+                    "manufacturer": "CORSAIR",
                     "partName": "iCUE 220T RGB 风冷flow (Black)",
                     "inShop": "Yes",
                     "price": 120,
@@ -64981,10 +64986,10 @@
                     "maxRadiatorLength140mm": 2,
                     "isDlc": "No"
                 },
-                "CORS风冷 iCUE 220T RGB TG (White)": {
+                "CORSAIR iCUE 220T RGB TG (White)": {
                     "isHEMPart": false,
-                    "fullName": "CORS风冷 iCUE 220T RGB TG (White)",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR iCUE 220T RGB TG (White)",
+                    "manufacturer": "CORSAIR",
                     "partName": "iCUE 220T RGB TG (White)",
                     "inShop": "Yes",
                     "price": 140,
@@ -65002,10 +65007,10 @@
                     "maxRadiatorLength140mm": 2,
                     "isDlc": "No"
                 },
-                "CORS风冷 iCUE 220T RGB TG (Black)": {
+                "CORSAIR iCUE 220T RGB TG (Black)": {
                     "isHEMPart": false,
-                    "fullName": "CORS风冷 iCUE 220T RGB TG (Black)",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR iCUE 220T RGB TG (Black)",
+                    "manufacturer": "CORSAIR",
                     "partName": "iCUE 220T RGB TG (Black)",
                     "inShop": "Yes",
                     "price": 140,
@@ -65023,10 +65028,10 @@
                     "maxRadiatorLength140mm": 2,
                     "isDlc": "No"
                 },
-                "CORS风冷 Carbide Series 风冷 740": {
+                "CORSAIR Carbide Series 风冷 740": {
                     "isHEMPart": false,
-                    "fullName": "CORS风冷 Carbide Series 风冷 740",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR Carbide Series 风冷 740",
+                    "manufacturer": "CORSAIR",
                     "partName": "Carbide Series 风冷 740",
                     "inShop": "Yes",
                     "price": 280,
@@ -65044,10 +65049,10 @@
                     "maxRadiatorLength140mm": 2,
                     "isDlc": "No"
                 },
-                "CORS风冷 Carbide Series SPEC-OMEGA (Black/Red)": {
+                "CORSAIR Carbide Series SPEC-OMEGA (Black/Red)": {
                     "isHEMPart": false,
-                    "fullName": "CORS风冷 Carbide Series SPEC-OMEGA (Black/Red)",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR Carbide Series SPEC-OMEGA (Black/Red)",
+                    "manufacturer": "CORSAIR",
                     "partName": "Carbide Series SPEC-OMEGA (Black/Red)",
                     "inShop": "Yes",
                     "price": 100,
@@ -65065,10 +65070,10 @@
                     "maxRadiatorLength140mm": 2,
                     "isDlc": "No"
                 },
-                "CORS风冷 Carbide Series SPEC-OMEGA (Black/White)": {
+                "CORSAIR Carbide Series SPEC-OMEGA (Black/White)": {
                     "isHEMPart": false,
-                    "fullName": "CORS风冷 Carbide Series SPEC-OMEGA (Black/White)",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR Carbide Series SPEC-OMEGA (Black/White)",
+                    "manufacturer": "CORSAIR",
                     "partName": "Carbide Series SPEC-OMEGA (Black/White)",
                     "inShop": "Yes",
                     "price": 100,
@@ -65086,10 +65091,10 @@
                     "maxRadiatorLength140mm": 2,
                     "isDlc": "No"
                 },
-                "CORS风冷 Carbide Series SPEC-OMEGA (Black)": {
+                "CORSAIR Carbide Series SPEC-OMEGA (Black)": {
                     "isHEMPart": false,
-                    "fullName": "CORS风冷 Carbide Series SPEC-OMEGA (Black)",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR Carbide Series SPEC-OMEGA (Black)",
+                    "manufacturer": "CORSAIR",
                     "partName": "Carbide Series SPEC-OMEGA (Black)",
                     "inShop": "Yes",
                     "price": 100,
@@ -65107,10 +65112,10 @@
                     "maxRadiatorLength140mm": 2,
                     "isDlc": "No"
                 },
-                "CORS风冷 Carbide Series 275R (Black)": {
+                "CORSAIR Carbide Series 275R (Black)": {
                     "isHEMPart": false,
-                    "fullName": "CORS风冷 Carbide Series 275R (Black)",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR Carbide Series 275R (Black)",
+                    "manufacturer": "CORSAIR",
                     "partName": "Carbide Series 275R (Black)",
                     "inShop": "Yes",
                     "price": 80,
@@ -65128,10 +65133,10 @@
                     "maxRadiatorLength140mm": 2,
                     "isDlc": "No"
                 },
-                "CORS风冷 Carbide Series 275R (White)": {
+                "CORSAIR Carbide Series 275R (White)": {
                     "isHEMPart": false,
-                    "fullName": "CORS风冷 Carbide Series 275R (White)",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR Carbide Series 275R (White)",
+                    "manufacturer": "CORSAIR",
                     "partName": "Carbide Series 275R (White)",
                     "inShop": "Yes",
                     "price": 80,
@@ -65149,10 +65154,10 @@
                     "maxRadiatorLength140mm": 2,
                     "isDlc": "No"
                 },
-                "CORS风冷 Graphite Series 380T (Black)": {
+                "CORSAIR Graphite Series 380T (Black)": {
                     "isHEMPart": false,
-                    "fullName": "CORS风冷 Graphite Series 380T (Black)",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR Graphite Series 380T (Black)",
+                    "manufacturer": "CORSAIR",
                     "partName": "Graphite Series 380T (Black)",
                     "inShop": "Yes",
                     "price": 110,
@@ -69937,10 +69942,10 @@
                     "maxRadiatorLength140mm": 2,
                     "isDlc": "No"
                 },
-                "CORS风冷 Carbide Series 275R (Black) 风冷flow Edition": {
+                "CORSAIR Carbide Series 275R (Black) 风冷flow Edition": {
                     "isHEMPart": true,
-                    "fullName": "CORS风冷 Carbide Series 275R (Black) 风冷flow Edition",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR Carbide Series 275R (Black) 风冷flow Edition",
+                    "manufacturer": "CORSAIR",
                     "partName": "Carbide Series 275R (Black) 风冷flow Edition",
                     "inShop": "Yes",
                     "price": 195,
@@ -69958,10 +69963,10 @@
                     "maxRadiatorLength140mm": 2,
                     "isDlc": "No"
                 },
-                "CORS风冷 Carbide Series 275R (White) 风冷flow Edition": {
+                "CORSAIR Carbide Series 275R (White) 风冷flow Edition": {
                     "isHEMPart": true,
-                    "fullName": "CORS风冷 Carbide Series 275R (White) 风冷flow Edition",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR Carbide Series 275R (White) 风冷flow Edition",
+                    "manufacturer": "CORSAIR",
                     "partName": "Carbide Series 275R (White) 风冷flow Edition",
                     "inShop": "Yes",
                     "price": 195,
@@ -70147,10 +70152,10 @@
                     "maxRadiatorLength140mm": 2,
                     "isDlc": "No"
                 },
-                "CORS风冷 Carbide Series 175R RGB 风冷flow Edition": {
+                "CORSAIR Carbide Series 175R RGB 风冷flow Edition": {
                     "isHEMPart": true,
-                    "fullName": "CORS风冷 Carbide Series 175R RGB 风冷flow Edition",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR Carbide Series 175R RGB 风冷flow Edition",
+                    "manufacturer": "CORSAIR",
                     "partName": "Carbide Series 175R RGB 风冷flow Edition",
                     "inShop": "Yes",
                     "price": 200,
@@ -70336,10 +70341,10 @@
                     "maxRadiatorLength140mm": 0,
                     "isDlc": "No"
                 },
-                "CORS风冷 Carbide SPEC-06 RGB (Black) 风冷flow Edition": {
+                "CORSAIR Carbide SPEC-06 RGB (Black) 风冷flow Edition": {
                     "isHEMPart": true,
-                    "fullName": "CORS风冷 Carbide SPEC-06 RGB (Black) 风冷flow Edition",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR Carbide SPEC-06 RGB (Black) 风冷flow Edition",
+                    "manufacturer": "CORSAIR",
                     "partName": "Carbide SPEC-06 RGB (Black) 风冷flow Edition",
                     "inShop": "Yes",
                     "price": 275,
@@ -70357,10 +70362,10 @@
                     "maxRadiatorLength140mm": 2,
                     "isDlc": "No"
                 },
-                "CORS风冷 Carbide SPEC-06 RGB (White) 风冷flow Edition": {
+                "CORSAIR Carbide SPEC-06 RGB (White) 风冷flow Edition": {
                     "isHEMPart": true,
-                    "fullName": "CORS风冷 Carbide SPEC-06 RGB (White) 风冷flow Edition",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR Carbide SPEC-06 RGB (White) 风冷flow Edition",
+                    "manufacturer": "CORSAIR",
                     "partName": "Carbide SPEC-06 RGB (White) 风冷flow Edition",
                     "inShop": "Yes",
                     "price": 275,
@@ -70378,10 +70383,10 @@
                     "maxRadiatorLength140mm": 2,
                     "isDlc": "No"
                 },
-                "CORS风冷 Carbide Series SPEC-OMEGA (Black/Red) 风冷flow Edition": {
+                "CORSAIR Carbide Series SPEC-OMEGA (Black/Red) 风冷flow Edition": {
                     "isHEMPart": true,
-                    "fullName": "CORS风冷 Carbide Series SPEC-OMEGA (Black/Red) 风冷flow Edition",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR Carbide Series SPEC-OMEGA (Black/Red) 风冷flow Edition",
+                    "manufacturer": "CORSAIR",
                     "partName": "Carbide Series SPEC-OMEGA (Black/Red) 风冷flow Edition",
                     "inShop": "Yes",
                     "price": 245,
@@ -70399,10 +70404,10 @@
                     "maxRadiatorLength140mm": 2,
                     "isDlc": "No"
                 },
-                "CORS风冷 Carbide Series SPEC-OMEGA (Black/White) 风冷flow Edition": {
+                "CORSAIR Carbide Series SPEC-OMEGA (Black/White) 风冷flow Edition": {
                     "isHEMPart": true,
-                    "fullName": "CORS风冷 Carbide Series SPEC-OMEGA (Black/White) 风冷flow Edition",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR Carbide Series SPEC-OMEGA (Black/White) 风冷flow Edition",
+                    "manufacturer": "CORSAIR",
                     "partName": "Carbide Series SPEC-OMEGA (Black/White) 风冷flow Edition",
                     "inShop": "Yes",
                     "price": 245,
@@ -70420,10 +70425,10 @@
                     "maxRadiatorLength140mm": 2,
                     "isDlc": "No"
                 },
-                "CORS风冷 Carbide Series SPEC-OMEGA (Black) 风冷flow Edition": {
+                "CORSAIR Carbide Series SPEC-OMEGA (Black) 风冷flow Edition": {
                     "isHEMPart": true,
-                    "fullName": "CORS风冷 Carbide Series SPEC-OMEGA (Black) 风冷flow Edition",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR Carbide Series SPEC-OMEGA (Black) 风冷flow Edition",
+                    "manufacturer": "CORSAIR",
                     "partName": "Carbide Series SPEC-OMEGA (Black) 风冷flow Edition",
                     "inShop": "Yes",
                     "price": 245,
@@ -71533,10 +71538,10 @@
                     "maxRadiatorLength140mm": 3,
                     "isDlc": "No"
                 },
-                "CORS风冷 iCUE 220T RGB Ultra 风冷flow (White) 风冷flow Edition": {
+                "CORSAIR iCUE 220T RGB Ultra 风冷flow (White) 风冷flow Edition": {
                     "isHEMPart": true,
-                    "fullName": "CORS风冷 iCUE 220T RGB Ultra 风冷flow (White) 风冷flow Edition",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR iCUE 220T RGB Ultra 风冷flow (White) 风冷flow Edition",
+                    "manufacturer": "CORSAIR",
                     "partName": "iCUE 220T RGB Ultra 风冷flow (White) 风冷flow Edition",
                     "inShop": "Yes",
                     "price": 245,
@@ -71554,10 +71559,10 @@
                     "maxRadiatorLength140mm": 2,
                     "isDlc": "No"
                 },
-                "CORS风冷 iCUE 220T RGB Ultra 风冷flow (Black) 风冷flow Edition": {
+                "CORSAIR iCUE 220T RGB Ultra 风冷flow (Black) 风冷flow Edition": {
                     "isHEMPart": true,
-                    "fullName": "CORS风冷 iCUE 220T RGB Ultra 风冷flow (Black) 风冷flow Edition",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR iCUE 220T RGB Ultra 风冷flow (Black) 风冷flow Edition",
+                    "manufacturer": "CORSAIR",
                     "partName": "iCUE 220T RGB Ultra 风冷flow (Black) 风冷flow Edition",
                     "inShop": "Yes",
                     "price": 245,
@@ -71701,10 +71706,10 @@
                     "maxRadiatorLength140mm": 3,
                     "isDlc": "No"
                 },
-                "CORS风冷 Obsidian Series 500D 风冷flow Edition": {
+                "CORSAIR Obsidian Series 500D 风冷flow Edition": {
                     "isHEMPart": true,
-                    "fullName": "CORS风冷 Obsidian Series 500D 风冷flow Edition",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR Obsidian Series 500D 风冷flow Edition",
+                    "manufacturer": "CORSAIR",
                     "partName": "Obsidian Series 500D 风冷flow Edition",
                     "inShop": "Yes",
                     "price": 285,
@@ -72415,10 +72420,10 @@
                     "maxRadiatorLength140mm": 0,
                     "isDlc": "No"
                 },
-                "CORS风冷 Obsidian Series 900D 风冷flow Edition": {
+                "CORSAIR Obsidian Series 900D 风冷flow Edition": {
                     "isHEMPart": true,
-                    "fullName": "CORS风冷 Obsidian Series 900D 风冷flow Edition",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR Obsidian Series 900D 风冷flow Edition",
+                    "manufacturer": "CORSAIR",
                     "partName": "Obsidian Series 900D 风冷flow Edition",
                     "inShop": "Yes",
                     "price": 525,
@@ -72520,10 +72525,10 @@
                     "maxRadiatorLength140mm": 3,
                     "isDlc": "No"
                 },
-                "CORS风冷 Obsidian Series 1000D 风冷flow Edition": {
+                "CORSAIR Obsidian Series 1000D 风冷flow Edition": {
                     "isHEMPart": true,
-                    "fullName": "CORS风冷 Obsidian Series 1000D 风冷flow Edition",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR Obsidian Series 1000D 风冷flow Edition",
+                    "manufacturer": "CORSAIR",
                     "partName": "Obsidian Series 1000D 风冷flow Edition",
                     "inShop": "Yes",
                     "price": 645,
@@ -72709,10 +72714,10 @@
                     "maxRadiatorLength140mm": 0,
                     "isDlc": "No"
                 },
-                "CORS风冷 Carbide Series 风冷 740 风冷flow Edition": {
+                "CORSAIR Carbide Series 风冷 740 风冷flow Edition": {
                     "isHEMPart": true,
-                    "fullName": "CORS风冷 Carbide Series 风冷 740 风冷flow Edition",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR Carbide Series 风冷 740 风冷flow Edition",
+                    "manufacturer": "CORSAIR",
                     "partName": "Carbide Series 风冷 740 风冷flow Edition",
                     "inShop": "Yes",
                     "price": 445,
@@ -72730,10 +72735,10 @@
                     "maxRadiatorLength140mm": 2,
                     "isDlc": "No"
                 },
-                "CORS风冷 Crystal Series 570X RGB 风冷flow Edition": {
+                "CORSAIR Crystal Series 570X RGB 风冷flow Edition": {
                     "isHEMPart": true,
-                    "fullName": "CORS风冷 Crystal Series 570X RGB 风冷flow Edition",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR Crystal Series 570X RGB 风冷flow Edition",
+                    "manufacturer": "CORSAIR",
                     "partName": "Crystal Series 570X RGB 风冷flow Edition",
                     "inShop": "Yes",
                     "price": 385,
@@ -73171,10 +73176,10 @@
                     "maxRadiatorLength140mm": 2,
                     "isDlc": "No"
                 },
-                "CORS风冷 Obsidian Series 750D 风冷flow Edition": {
+                "CORSAIR Obsidian Series 750D 风冷flow Edition": {
                     "isHEMPart": true,
-                    "fullName": "CORS风冷 Obsidian Series 750D 风冷flow Edition",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR Obsidian Series 750D 风冷flow Edition",
+                    "manufacturer": "CORSAIR",
                     "partName": "Obsidian Series 750D 风冷flow Edition",
                     "inShop": "Yes",
                     "price": 295,
@@ -73423,10 +73428,10 @@
                     "maxRadiatorLength140mm": 4,
                     "isDlc": "No"
                 },
-                "CORS风冷 Obsidian Series 1000D Miner Edition": {
+                "CORSAIR Obsidian Series 1000D Miner Edition": {
                     "isHEMPart": true,
-                    "fullName": "CORS风冷 Obsidian Series 1000D Miner Edition",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR Obsidian Series 1000D Miner Edition",
+                    "manufacturer": "CORSAIR",
                     "partName": "Obsidian Series 1000D Miner Edition",
                     "inShop": "Yes",
                     "price": 1499,
@@ -73808,10 +73813,10 @@
                     "includesHeatsink": "No",
                     "heatsinkThickness": 0
                 },
-                "CORS风冷 Force Series - MP500 M.2 120GB": {
+                "CORSAIR Force Series - MP500 M.2 120GB": {
                     "isHEMPart": false,
-                    "fullName": "CORS风冷 Force Series - MP500 M.2 120GB",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR Force Series - MP500 M.2 120GB",
+                    "manufacturer": "CORSAIR",
                     "partName": "Force Series - MP500 M.2 120GB",
                     "inShop": "Yes",
                     "price": 150,
@@ -73824,10 +73829,10 @@
                     "includesHeatsink": "No",
                     "heatsinkThickness": 0
                 },
-                "CORS风冷 Force Series - MP500 M.2 240GB": {
+                "CORSAIR Force Series - MP500 M.2 240GB": {
                     "isHEMPart": false,
-                    "fullName": "CORS风冷 Force Series - MP500 M.2 240GB",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR Force Series - MP500 M.2 240GB",
+                    "manufacturer": "CORSAIR",
                     "partName": "Force Series - MP500 M.2 240GB",
                     "inShop": "Yes",
                     "price": 200,
@@ -73840,10 +73845,10 @@
                     "includesHeatsink": "No",
                     "heatsinkThickness": 0
                 },
-                "CORS风冷 Force Series - MP500 M.2 480GB": {
+                "CORSAIR Force Series - MP500 M.2 480GB": {
                     "isHEMPart": false,
-                    "fullName": "CORS风冷 Force Series - MP500 M.2 480GB",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR Force Series - MP500 M.2 480GB",
+                    "manufacturer": "CORSAIR",
                     "partName": "Force Series - MP500 M.2 480GB",
                     "inShop": "Yes",
                     "price": 300,
@@ -73856,10 +73861,10 @@
                     "includesHeatsink": "No",
                     "heatsinkThickness": 0
                 },
-                "CORS风冷 Force Series - MP500 M.2 960GB": {
+                "CORSAIR Force Series - MP500 M.2 960GB": {
                     "isHEMPart": false,
-                    "fullName": "CORS风冷 Force Series - MP500 M.2 960GB",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR Force Series - MP500 M.2 960GB",
+                    "manufacturer": "CORSAIR",
                     "partName": "Force Series - MP500 M.2 960GB",
                     "inShop": "Yes",
                     "price": 500,
@@ -73872,10 +73877,10 @@
                     "includesHeatsink": "No",
                     "heatsinkThickness": 0
                 },
-                "CORS风冷 Force Series - MP600 M.2 512GB": {
+                "CORSAIR Force Series - MP600 M.2 512GB": {
                     "isHEMPart": false,
-                    "fullName": "CORS风冷 Force Series - MP600 M.2 512GB",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR Force Series - MP600 M.2 512GB",
+                    "manufacturer": "CORSAIR",
                     "partName": "Force Series - MP600 M.2 512GB",
                     "inShop": "Yes",
                     "price": 240,
@@ -73888,10 +73893,10 @@
                     "includesHeatsink": "Yes",
                     "heatsinkThickness": 0.064
                 },
-                "CORS风冷 Force Series - MP600 M.2 1TB": {
+                "CORSAIR Force Series - MP600 M.2 1TB": {
                     "isHEMPart": false,
-                    "fullName": "CORS风冷 Force Series - MP600 M.2 1TB",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR Force Series - MP600 M.2 1TB",
+                    "manufacturer": "CORSAIR",
                     "partName": "Force Series - MP600 M.2 1TB",
                     "inShop": "Yes",
                     "price": 370,
@@ -73904,10 +73909,10 @@
                     "includesHeatsink": "Yes",
                     "heatsinkThickness": 0.064
                 },
-                "CORS风冷 Force Series - MP600 M.2 2TB": {
+                "CORSAIR Force Series - MP600 M.2 2TB": {
                     "isHEMPart": false,
-                    "fullName": "CORS风冷 Force Series - MP600 M.2 2TB",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR Force Series - MP600 M.2 2TB",
+                    "manufacturer": "CORSAIR",
                     "partName": "Force Series - MP600 M.2 2TB",
                     "inShop": "Yes",
                     "price": 440,
@@ -74576,10 +74581,10 @@
                     "includesHeatsink": "No",
                     "heatsinkThickness": 0
                 },
-                "CORS风冷 Force Series - LE200 120GB": {
+                "CORSAIR Force Series - LE200 120GB": {
                     "isHEMPart": false,
-                    "fullName": "CORS风冷 Force Series - LE200 120GB",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR Force Series - LE200 120GB",
+                    "manufacturer": "CORSAIR",
                     "partName": "Force Series - LE200 120GB",
                     "inShop": "Yes",
                     "price": 90,
@@ -74592,10 +74597,10 @@
                     "includesHeatsink": "No",
                     "heatsinkThickness": 0
                 },
-                "CORS风冷 Force Series - LE200 240GB": {
+                "CORSAIR Force Series - LE200 240GB": {
                     "isHEMPart": false,
-                    "fullName": "CORS风冷 Force Series - LE200 240GB",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR Force Series - LE200 240GB",
+                    "manufacturer": "CORSAIR",
                     "partName": "Force Series - LE200 240GB",
                     "inShop": "Yes",
                     "price": 105,
@@ -74608,10 +74613,10 @@
                     "includesHeatsink": "No",
                     "heatsinkThickness": 0
                 },
-                "CORS风冷 Force Series - LE200 480GB": {
+                "CORSAIR Force Series - LE200 480GB": {
                     "isHEMPart": false,
-                    "fullName": "CORS风冷 Force Series - LE200 480GB",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR Force Series - LE200 480GB",
+                    "manufacturer": "CORSAIR",
                     "partName": "Force Series - LE200 480GB",
                     "inShop": "Yes",
                     "price": 190,
@@ -74624,10 +74629,10 @@
                     "includesHeatsink": "No",
                     "heatsinkThickness": 0
                 },
-                "CORS风冷 Force Series - LE200 960GB": {
+                "CORSAIR Force Series - LE200 960GB": {
                     "isHEMPart": false,
-                    "fullName": "CORS风冷 Force Series - LE200 960GB",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR Force Series - LE200 960GB",
+                    "manufacturer": "CORSAIR",
                     "partName": "Force Series - LE200 960GB",
                     "inShop": "Yes",
                     "price": 350,
@@ -75568,10 +75573,10 @@
                     "includesHeatsink": "No",
                     "heatsinkThickness": 0
                 },
-                "CORS风冷 Force Series - MP600 M.2 512GB (No Heatsink)": {
+                "CORSAIR Force Series - MP600 M.2 512GB (No Heatsink)": {
                     "isHEMPart": true,
-                    "fullName": "CORS风冷 Force Series - MP600 M.2 512GB (No Heatsink)",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR Force Series - MP600 M.2 512GB (No Heatsink)",
+                    "manufacturer": "CORSAIR",
                     "partName": "Force Series - MP600 M.2 512GB (No Heatsink)",
                     "inShop": "Yes",
                     "price": 230,
@@ -75584,10 +75589,10 @@
                     "includesHeatsink": "No",
                     "heatsinkThickness": 0
                 },
-                "CORS风冷 Force Series - MP600 M.2 1TB (No Heatsink)": {
+                "CORSAIR Force Series - MP600 M.2 1TB (No Heatsink)": {
                     "isHEMPart": true,
-                    "fullName": "CORS风冷 Force Series - MP600 M.2 1TB (No Heatsink)",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR Force Series - MP600 M.2 1TB (No Heatsink)",
+                    "manufacturer": "CORSAIR",
                     "partName": "Force Series - MP600 M.2 1TB (No Heatsink)",
                     "inShop": "Yes",
                     "price": 360,
@@ -75600,10 +75605,10 @@
                     "includesHeatsink": "No",
                     "heatsinkThickness": 0
                 },
-                "CORS风冷 Force Series - MP600 M.2 2TB (No Heatsink)": {
+                "CORSAIR Force Series - MP600 M.2 2TB (No Heatsink)": {
                     "isHEMPart": true,
-                    "fullName": "CORS风冷 Force Series - MP600 M.2 2TB (No Heatsink)",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR Force Series - MP600 M.2 2TB (No Heatsink)",
+                    "manufacturer": "CORSAIR",
                     "partName": "Force Series - MP600 M.2 2TB (No Heatsink)",
                     "inShop": "Yes",
                     "price": 430,
@@ -75680,10 +75685,10 @@
                     "includesHeatsink": "Yes",
                     "heatsinkThickness": 0.06
                 },
-                "CORS风冷 Force Series - MP600 Pro M.2 1TB": {
+                "CORSAIR Force Series - MP600 Pro M.2 1TB": {
                     "isHEMPart": true,
-                    "fullName": "CORS风冷 Force Series - MP600 Pro M.2 1TB",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR Force Series - MP600 Pro M.2 1TB",
+                    "manufacturer": "CORSAIR",
                     "partName": "Force Series - MP600 Pro M.2 1TB",
                     "inShop": "Yes",
                     "price": 585,
@@ -75696,10 +75701,10 @@
                     "includesHeatsink": "Yes",
                     "heatsinkThickness": 0.064
                 },
-                "CORS风冷 Force Series - MP600 Pro M.2 2TB": {
+                "CORSAIR Force Series - MP600 Pro M.2 2TB": {
                     "isHEMPart": true,
-                    "fullName": "CORS风冷 Force Series - MP600 Pro M.2 2TB",
-                    "manufacturer": "CORS风冷",
+                    "fullName": "CORSAIR Force Series - MP600 Pro M.2 2TB",
+                    "manufacturer": "CORSAIR",
                     "partName": "Force Series - MP600 Pro M.2 2TB",
                     "inShop": "Yes",
                     "price": 835,
@@ -76916,13 +76921,13 @@
             if (!data.cpus[selectedCpu]) {
                 alertMessage = "请选择CPU"
             } else if (selectedRamChannel > data.cpus[selectedCpu].maxMemoryChannels) {
-                alertMessage = "CPU only supports " + data.cpus[selectedCpu].maxMemoryChannels + " RAM Channels."
+                alertMessage = "CPU 只支持 " + data.cpus[selectedCpu].maxMemoryChannels + " RAM 通道."
             } else if (!data.gpus[selectedGpu]) {
                 alertMessage = "请选择GPU."
             } else if (!cpuSupportsGpu(selectedCpu, selectedGpu)) {
                 alertMessage = "已选CPU不支持当前GPU."
             } else if (selectedGpuCount == "2" && data.gpus[selectedGpu].multiGPU == null) {
-                alertMessage = "Selected GPU does not support multi-GPU."
+                alertMessage = "已选显卡不支持交火/SLI."
             }
             if (alertMessage != "") {
                 if (showAlerts) {
@@ -77001,11 +77006,11 @@
 
             var alertMessage = ""
             if (!isLevelSet()) {
-                alertMessage = "Level is required."
+                alertMessage = "请填写等级"
             } else if (isNaN(budgetTotal) || budgetTotal == 0) {
-                alertMessage = "Budget is required."
+                alertMessage = "请填写预算"
             } else if (isNaN(target3DMarkScore) || target3DMarkScore == 0) {
-                alertMessage = "Score is required."
+                alertMessage = "请填写跑分."
             }
             if (alertMessage != "") {
                 if (showAlerts) {
@@ -77354,7 +77359,7 @@
             }
 
             if (showAlerts && results.length == 0) {
-                alert("No builds found.")
+                alert("无方案.")
             }
         }
 
@@ -77426,37 +77431,37 @@
 
             var alertMessage = ""
             if (!isLevelSet()) {
-                alertMessage = "Level is required."
+                alertMessage = "请填写等级."
             } else if (isNaN(budgetTotal) || budgetTotal == 0) {
-                alertMessage = "Budget is required."
+                alertMessage = "请填写预算."
             } else if (isNaN(target3DMarkScore) || target3DMarkScore == 0) {
-                alertMessage = "Score is required."
+                alertMessage = "请填写跑分."
             } else if (!data.cpus[originalSystemCpu]) {
                 alertMessage = "请选择CPU"
             } else if (originalSystemRamSticks < 1) {
-                alertMessage = "RAM Sticks is required."
+                alertMessage = "请选择内存."
             } else if (!data.gpus[originalSystemGpu]) {
                 alertMessage = "请选择GPU."
             } else if (!cpuSupportsGpu(originalSystemCpu, originalSystemGpu)) {
                 alertMessage = "已选CPU不支持当前GPU."
             } else if (originalSystemGpuCount == "2" && data.gpus[originalSystemGpu].multiGPU == null) {
-                alertMessage = "Selected GPU does not support multi-GPU."
+                alertMessage = "显卡不支持交火/SLI."
             } else if (!moboSupportsCpu(originalSystemMobo, originalSystemCpu)) {
-                alertMessage = "Selected CPU and Motherboard are incompatible."
+                alertMessage = "CPU与主板不兼容."
             } else if (!moboSupportsGpu(originalSystemMobo, originalSystemGpu, originalSystemGpuCount)) {
-                alertMessage = "Motherboard does not support this Multi-GPU type."
+                alertMessage = "主板不支持此类型双显卡."
             } else if (!moboSupportsRamCount(originalSystemMobo, originalSystemRamSticks)) {
-                alertMessage = "Motherboard does not support this many RAM Sticks."
+                alertMessage = "主板不支持此类内存."
             } else if (originalSystemCase != "" && !data.pcCases[originalSystemCase]) {
-                alertMessage = "Case not found."
+                alertMessage = "请选择机箱"
             } else if (originalSystemCase != "" && !caseSupportsMobo(originalSystemCase, originalSystemMobo)) {
-                alertMessage = "Case does not support motherboard."
+                alertMessage = "机箱不支持此主板."
             } else if (originalSystemCase != "" && originalSystemGpu != "" && !caseSupportsGpu(originalSystemCase, originalSystemGpu, originalSystemGpuCount)) {
-                alertMessage = "Case does not support GPU(s)."
+                alertMessage = "机箱不支持双显卡."
             } else if (originalSystemM2 != "" && !data.storages[originalSystemM2]) {
-                alertMessage = "M.2 not found."
+                alertMessage = "请选择M.2固态."
             } else if (originalSystemM2 != "" && !moboSupportsM2(originalSystemMobo, originalSystemM2)) {
-                alertMessage = "Motherboard does not support this M.2."
+                alertMessage = "主板不支持此 M.2固态."
             }
             if (alertMessage != "") {
                 if (showAlerts) {
@@ -77470,7 +77475,7 @@
             var originalSystemScore = getSystemScore(getCpuScore(data, originalSystemCpu, originalSystemRamChannel, originalSystemRamSpeedForCalc), getGpuScore(data, originalSystemGpu, originalSystemGpuCount))
             if (originalSystemScore >= target3DMarkScore) {
                 if (showAlerts) {
-                    alert("No upgrade is needed. However, the calculator will still list results for part replacements.")
+                    alert("此配置不需要Upgrade，但仍会列出以下方案以供参考")
                 }
             }
 
@@ -77488,7 +77493,7 @@
             var score
             var price
 
-            /* CPU upgrade */
+            /* CPU Upgrade */
             mobo = originalSystemMobo
             gpu = originalSystemGpu
             gpuCount = originalSystemGpuCount
@@ -77512,7 +77517,7 @@
                 }
             }
 
-            /* GPU upgrade */
+            /* GPU Upgrade */
             mobo = originalSystemMobo
             cpu = originalSystemCpu
             ramSpeed = getRamSpeedXMP(originalSystemRamSpeed, mobo)
@@ -77548,7 +77553,7 @@
                 }
             }
 
-            /* CPU+GPU upgrade */
+            /* CPU+GPU Upgrade */
             mobo = originalSystemMobo
             ramSpeed = getRamSpeedXMP(originalSystemRamSpeed, mobo)
             for (cpu in data.cpus) {
@@ -77590,7 +77595,7 @@
                 }
             }
 
-            /* CPU upgrade, motherboard change */
+            /* CPU Upgrade, motherboard change */
             gpu = originalSystemGpu
             gpuCount = originalSystemGpuCount
             for (mobo in data.mobos) {
@@ -77622,7 +77627,7 @@
                 }
             }
 
-            /* GPU upgrade, motherboard change */
+            /* GPU Upgrade, motherboard change */
             cpu = originalSystemCpu
             ramChannel = Math.min(originalSystemRamSticks, data.cpus[cpu].maxMemoryChannels)
             for (mobo in data.mobos) {
@@ -77666,7 +77671,7 @@
                 }
             }
 
-            /* CPU+GPU upgrade, motherboard change */
+            /* CPU+GPU Upgrade, motherboard change */
             for (mobo in data.mobos) {
                 if ((pcCase != "" && !caseSupportsMobo(pcCase, mobo)) ||
                     (m2 != "" && !moboSupportsM2(mobo, m2))) {
@@ -77761,7 +77766,7 @@
             }
 
             if (showAlerts && results.length == 0) {
-                alert("No upgrades found.")
+                alert("无方案.")
             }
         }
     </script>
@@ -77796,49 +77801,51 @@
 
             var alertMessage = ""
             if (!isLevelSet()) {
-                alertMessage = "Level is required."
+                alertMessage = "请填写等级."
             } else if (isNaN(budgetTotal) || budgetTotal == 0) {
-                alertMessage = "Budget is required."
+                alertMessage = "请填写预算."
             } else if (!data.cpus[originalSystemCpu]) {
                 alertMessage = "请选择CPU"
             } else if (originalSystemGpu1 != "" && !data.gpus[originalSystemGpu1]) {
-                alertMessage = "GPU 1 not found."
+                alertMessage = "请填写GPU 1 ."
             } else if (originalSystemGpu2 != "" && !data.gpus[originalSystemGpu2]) {
-                alertMessage = "GPU 2 not found."
+                alertMessage = "请填写GPU 2 ."
             } else if (originalSystemGpu1 == "" && originalSystemGpu2 == "") {
-                alertMessage = "At least 1 GPU is required."
+                alertMessage = "请填写至少 1 GPU ."
             } else if (originalSystemGpu1 != "" && !cpuSupportsGpu(originalSystemCpu, originalSystemGpu1)) {
                 alertMessage = "已选CPU不支持当前GPU 1."
             } else if (originalSystemGpu2 != "" && !cpuSupportsGpu(originalSystemCpu, originalSystemGpu2)) {
                 alertMessage = "已选CPU不支持当前GPU 2."
             } else if (originalSystemGpu1 != "" && originalSystemGpu2 != "" && data.gpus[originalSystemGpu1].chipset != data.gpus[originalSystemGpu2].chipset) {
-                alertMessage = "GPU chipsets must be the same."
+                alertMessage = "GPU 必须一致"
             } else if (originalSystemGpu1 != "" && originalSystemGpu2 != "" && data.gpus[originalSystemGpu1].multiGPU == null) {
-                alertMessage = "GPU 1 does not support Multi-GPU."
+                alertMessage = "GPU 1 不支持双显卡."
             } else if (originalSystemGpu1 != "" && originalSystemGpu2 != "" && data.gpus[originalSystemGpu2].multiGPU == null) {
-                alertMessage = "GPU 2 does not support Multi-GPU."
+                alertMessage = "GPU 2 不支持双显卡."
             } else if (originalSystemGpu2Request == "AddDual" && originalSystemGpu2 != "") {
-                alertMessage = "GPU 2 must be blank to use the request to Add Dual-GPU."
+                // alertMessage = "GPU 2 must be blank to use the request to Add Dual-GPU."
+                alertMessage = "若需添加双显卡请不要选择显卡 2."
             } else if (!moboSupportsCpu(originalSystemMobo, originalSystemCpu)) {
-                alertMessage = "Selected CPU and Motherboard are incompatible."
+                alertMessage = "当前 CPU 和 显卡 不兼容"
             } else if (originalSystemGpu1 != "" && originalSystemGpu2 != "" && !moboSupportsGpu(originalSystemMobo, originalSystemGpu1, 2)) {
-                alertMessage = "Motherboard does not support this Multi-GPU type."
+                alertMessage = "主板不支持此类双显卡."
             } else if (originalSystemCase != "" && !data.pcCases[originalSystemCase]) {
-                alertMessage = "Case not found."
+                alertMessage = "请选择机箱."
             } else if (originalSystemCase != "" && !caseSupportsMobo(originalSystemCase, originalSystemMobo)) {
-                alertMessage = "Case does not support motherboard."
+                alertMessage = "机箱不支持此主板"
             } else if (originalSystemCase != "" && originalSystemGpu1 != "" && !caseSupportsGpu(originalSystemCase, originalSystemGpu1, 1)) {
-                alertMessage = "Case does not support GPU 1."
+                alertMessage = "机箱不支持此显卡 1 "
             } else if (originalSystemCase != "" && originalSystemGpu2 != "" && !caseSupportsGpu(originalSystemCase, originalSystemGpu2, 1)) {
-                alertMessage = "Case does not support GPU 2."
+                alertMessage = "机箱不支持此显卡 2"
             } else if (originalSystemCase != "" && originalSystemGpu1 != "" && originalSystemGpu2 != "" && !caseSupportsGpu(originalSystemCase, originalSystemGpu1, 2)) {
-                alertMessage = "Case does not support these GPUs."
+                alertMessage = "机箱不支持双显卡."
             } else if (originalSystemM2 != "" && !data.storages[originalSystemM2]) {
-                alertMessage = "M.2 not found."
+                alertMessage = "请选择M.2固态."
             } else if (originalSystemM2 != "" && !moboSupportsM2(originalSystemMobo, originalSystemM2)) {
-                alertMessage = "Motherboard does not support this M.2."
+                alertMessage = "主板不支持此M.2固态."
             } else if (originalSystemCpuRequest == "" && originalSystemGpu1Request == "" && originalSystemGpu2Request == "" && originalSystemMoboRequest == "") {
-                alertMessage = "At least 1 part must have a request."
+                alertMessage = "至少一个部件需填写需求"
+                // alertMessage = "At least 1 part must have a request."
             }
             if (alertMessage != "") {
                 if (showAlerts) {
@@ -78080,7 +78087,7 @@
             }
 
             if (showAlerts && results.length == 0) {
-                alert("No replacements found.")
+                alert("无方案.")
             }
         }
         function pushPartReplacerSolutionIfValid(
