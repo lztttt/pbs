@@ -1013,7 +1013,7 @@
                         <td class="tdramChannel"><b>数量</b></td>
                         <td class="tdRamSpeed"><b>频率</b></td>
                         <td class="tdRamPart"><b>内存</b></td>
-                        <td class="tdGpuCount"><b>#</b></td>
+                        <td class="tdGpuCount"><b>数量</b></td>
                         <td class="tdGpuType"><b>散热类型</b></td>
                         <td class="tdGpuPart"><b>显卡</b></td>
                         <td class="tdMobo"><b>主板</b></td>
@@ -1145,7 +1145,7 @@
                                 <select name="selectBuildUpgraderOptionsGpuCount">
                                     <option selected>不限</option>
                                     <option value="1">1: 单显卡</option>
-                                    <option value="2">2: D双显卡</option>
+                                    <option value="2">2: 双显卡</option>
                                 </select>
                             </td>
                         </tr>
@@ -1395,30 +1395,7 @@
                     </tr>
                 </table>
             </div>
-            <div id="divBuildMakerSaves">
-                <h1>Build Maker Saves</h1>
-                <table id="tableBuildMakerSaves">
-                    <tr>
-                        <td class="tdCase"><b>Case</b></td>
-                        <td class="tdCpu"><b>CPU</b></td>
-                        <td class="tdramChannel"><b>#</b></td>
-                        <td class="tdRamSpeed"><b>Speed</b></td>
-                        <td class="tdRamPart"><b>RAM</b></td>
-                        <td class="tdGpuCount"><b>#</b></td>
-                        <td class="tdGpuType"><b>Type</b></td>
-                        <td class="tdGpuPart"><b>GPU</b></td>
-                        <td class="tdMobo"><b>Motherboard</b></td>
-                        <td class="tdPrice"><b>Price</b></td>
-                        <td class="tdPrice"><b>Remaining</b></td>
-                        <td class="tdScore"><b>Score</b></td>
-                        <td class="tdOther"><b>Watts</b></td>
-                        <td class="tdOther"><b>Comment</b></td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-    </div>
-
+           
     <script id="Source Data">
         var sourceData = {
             "cpus": {
@@ -77355,7 +77332,6 @@
                 table.rows[i].cells[12].innerHTML = getSystemWatts(data, results[i - 1].cpu, results[i - 1].gpu, results[i - 1].gpuCount)
 
                 table.rows[i].cells[13].className = "tdOther"
-                table.rows[i].cells[13] = addSaveButton(table.rows[i].cells[13], i)
             }
 
             if (showAlerts && results.length == 0) {
