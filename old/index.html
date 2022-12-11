@@ -1,15 +1,13 @@
 <html>
 
 <head>
-    <meta charset="utf-8" />
-    <title>装机模拟器 - 在线 计算器 v1.15.3 Build 1 - 3DMark跑分, 装机配置单, 升级</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>装机模拟器在线最新跑分计算器3DMark </title>
     <meta name="description"
-          content="在线 装机模拟器 最新跑分计算器 3DMark 整机搭配助手 整机升级助手 部件替换助手 v1.15.3 适用 中文，汉化"/>
-    <meta name="Keywords" content="装机模拟器，PC-Building-Simulator，最新跑分计算器，整机搭配助手，整机升级助手，部件替换助手，同步更新，v1.15.3 适用"/>
-
-    <!-- <script src="index.js"></script> -->
+          content="在线 装机模拟器 最新跑分计算器 3DMark 整机搭配助手 整机升级助手 部件替换助手 v1.15.1适用 中文，汉化"/>
+    <meta name="Keywords" content="装机模拟器，PC-Building-Simulator，最新跑分计算器，整机搭配助手，整机升级助手，部件替换助手，同步更新，v1.15.1适用"/>
+    <description>"在线 装机模拟器 最新跑分计算器 3DMark 整机搭配助手 整机升级助手 部件替换助手 v1.15.1适用 中文，汉化"</description>
+    <script src="index.js"></script>
         <!-- bing统计 -->
     <script>
         (function(c,l,a,r,i,t,y){
@@ -21,599 +19,23 @@
 
 
     <link rel="icon" href="https://s3.bmp.ovh/imgs/2022/02/c2b6e78fe6eed1a3.png" />
-    <!-- <link href="index.css" rel="stylesheet"> -->
+    <link href="index.css" rel="stylesheet">
    
 
 </head>
-    <style>
-        body {
-            background-color: #000000;
-            color: white;
-            font-family: Arial;
-            font-size: 20px;
-        }
-
-        #divNavigationBar {
-            background-color: #000000;
-            color: white;
-            width: 100%;
-            height: 40px;
-            position: fixed;
-            top: 0;
-            text-align: center;
-        }
-
-        .tdNavigationBar {
-            background-color: #000066;
-            list-style: none;
-            display: inline-block;
-            padding: 8px 8px 8px 8px;
-            border-left: 1px solid;
-            border-right: 1px solid;
-            border-bottom: 1px solid;
-            border-top: 1px solid;
-            margin-left: -7px;
-            font-size: 18px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        #divOptions {
-            background-color: #000066;
-            height: 40px;
-            color: white;
-            width: 370px;
-            margin: auto;
-            padding: 32px 0px 0px 0px;
-            border: 1px solid;
-            border-bottom: 0px solid;
-        }
-
-        #tableOptions {
-            border: none;
-            padding: 0px;
-            border-collapse: collapse;
-            font-size: 14px;
-        }
-
-            #tableOptions td {
-                padding: 0px;
-            }
-
-                #tableOptions td.tdOptionHemLabel {
-                    width: 320px;
-                }
-
-                #tableOptions td.tdOptionHemCheckbox {
-                    width: 25px;
-                }
-
-                #tableOptions td.tdOptionPartsNotInShopLabel {
-                    width: 320px;
-                }
-
-                #tableOptions td.tdOptionPartsNotInShopCheckbox {
-                    width: 25px;
-                }
-
-        #divLevel {
-            background-color: #000066;
-            height: 28px;
-            color: white;
-            width: 430px;
-            margin: auto;
-            padding: 0px 0px 0px 0px;
-            border: 1px solid;
-            border-top: 1px solid;
-            text-align: center;
-        }
-
-        #tableLevel {
-            border: none;
-            padding: 0px;
-            border-collapse: collapse;
-            font-size: 14px;
-        }
-
-            #tableLevel td {
-                padding: 2px;
-            }
-
-                #tableLevel td.tdOptionAllPartsUnlockedLabel {
-                    width: 125px;
-                }
-
-                #tableLevel td.tdOptionAllPartsUnlockedCheckbox {
-                    width: 25px;
-                }
-
-                #tableLevel td.tdLevelLabel {
-                    width: 88px;
-                }
-
-                #tableLevel td.tdLevelValue {
-                    width: 40px;
-                }
-
-                #tableLevel td.tdLevelPercentThroughLabel {
-                    width: 76px;
-                }
-
-                #tableLevel td.tdLevelPercentThroughValue {
-                    width: 40px;
-                }
-
-        #div3DMarkScoreCalculator {
-            display: block;
-        }
-
-        #divBuildMaker {
-            display: none;
-        }
-
-        #divBuildUpgrader {
-            display: none;
-        }
-
-        #divPartReplacer {
-            display: none;
-        }
-
-        #divHistoryAndSaves {
-            display: none;
-        }
-
-        #divPages {
-            background-color: #000000;
-            text-align: center;
-            font-size: 12px;
-            font-weight: bold;
-            padding-top: 10px;
-        }
-
-        input {
-            border-radius: 0px 0px 0px 0px;
-            height: 25px;
-            width: 400px;
-        }
-
-            input.bigCheckbox {
-                width: 400px;
-            }
-
-            input.optionCheckbox {
-                height: auto;
-                width: auto;
-            }
-
-            input.levelText {
-                height: auto;
-                width: 30px;
-            }
-
-        button {
-            font-size: 16px;
-            padding: 2px 5px 2px 5px;
-        }
-
-        caption {
-            color: white;
-            font-size: 25px;
-            font-weight: bold;
-            padding-bottom: 10px;
-        }
-
-        select {
-            border-radius: 0px 0px 0px 0px;
-            height: 25px;
-            width: 400px;
-        }
-
-        #div3DMarkScoreCalculatorForm {
-            background-color: #000066;
-            color: white;
-            width: 600px;
-            margin: auto;
-            padding: 15px 20px;
-        }
-
-        #divBuildMakerForm {
-            background-color: #000066;
-            color: white;
-            width: 600px;
-            margin: auto;
-            padding: 15px 20px;
-            margin-bottom: 20px;
-        }
-
-        #tableBuildMakerResults {
-            border: none;
-            padding: 8px;
-            border-collapse: collapse;
-            margin: auto;
-            font-size: 15px;
-        }
-
-            #tableBuildMakerResults td {
-                background-color: black;
-                color: white;
-                border: 1px solid;
-                padding: 5px;
-            }
-
-                #tableBuildMakerResults td.tdCase {
-                    background-color: #450045;
-                }
-
-                #tableBuildMakerResults td.tdCpu {
-                    background-color: #003A00;
-                }
-
-                #tableBuildMakerResults td.tdramChannel {
-                    background-color: #54280B;
-                    text-align: center;
-                    padding: 0px 12px 0px 12px;
-                }
-
-                #tableBuildMakerResults td.tdRamSpeed {
-                    background-color: #54280B;
-                    text-align: center;
-                }
-
-                #tableBuildMakerResults td.tdRamPart {
-                    background-color: #54280B;
-                }
-
-                #tableBuildMakerResults td.tdGpuCount {
-                    background-color: #00003F;
-                    text-align: center;
-                    padding: 0px 12px 0px 12px;
-                }
-
-                #tableBuildMakerResults td.tdGpuType {
-                    background-color: #00003F;
-                    text-align: center;
-                }
-
-                #tableBuildMakerResults td.tdGpuPart {
-                    background-color: #00003F;
-                }
-
-                #tableBuildMakerResults td.tdMobo {
-                    background-color: #4C0000
-                }
-
-                #tableBuildMakerResults td.tdPrice {
-                    background-color: #004C00;
-                    text-align: center;
-                }
-
-                #tableBuildMakerResults td.tdScore {
-                    background-color: #442266;
-                    text-align: center;
-                }
-
-                #tableBuildMakerResults td.tdOther {
-                    background-color: black;
-                    text-align: center;
-                }
-
-            #tableBuildMakerResults button.buttonSave {
-                font-size: 12px;
-                padding: 0px 0px 0px 0px;
-            }
-
-        #divBuildMakerSaveForm {
-            top: 40%;
-            left: 40%;
-            position: absolute;
-            background-color: white;
-            z-index: 2;
-            border: 5px 5px 5px 5px;
-            height: 100px;
-            width: 350px;
-            padding: 20px 20px;
-            display: none;
-        }
-
-        #divBuildUpgraderForm {
-            background-color: #000066;
-            color: white;
-            margin: auto;
-            width: 600px;
-            padding: 15px 20px;
-            margin-bottom: 20px;
-        }
-
-        #tableBuildUpgraderResults {
-            border: none;
-            padding: 8px;
-            border-collapse: collapse;
-            margin: auto;
-            font-size: 15px;
-        }
-
-            #tableBuildUpgraderResults td {
-                background-color: black;
-                color: white;
-                border: 1px solid;
-                padding: 5px;
-            }
-
-                #tableBuildUpgraderResults td.tdCpu {
-                    background-color: #003A00;
-                }
-
-                #tableBuildUpgraderResults td.tdramChannel {
-                    background-color: #54280B;
-                    text-align: center;
-                    padding: 0px 12px 0px 12px;
-                }
-
-                #tableBuildUpgraderResults td.tdRamSpeed {
-                    background-color: #54280B;
-                    text-align: center;
-                }
-
-                #tableBuildUpgraderResults td.tdRamPart {
-                    background-color: #54280B;
-                }
-
-                #tableBuildUpgraderResults td.tdGpuCount {
-                    background-color: #00003F;
-                    text-align: center;
-                    padding: 0px 12px 0px 12px;
-                }
-
-                #tableBuildUpgraderResults td.tdGpuType {
-                    background-color: #00003F;
-                    text-align: center;
-                }
-
-                #tableBuildUpgraderResults td.tdGpuPart {
-                    background-color: #00003F;
-                }
-
-                #tableBuildUpgraderResults td.tdMobo {
-                    background-color: #4C0000
-                }
-
-                #tableBuildUpgraderResults td.tdPrice {
-                    background-color: #004C00;
-                    text-align: center;
-                }
-
-                #tableBuildUpgraderResults td.tdScore {
-                    background-color: #442266;
-                    text-align: center;
-                }
-
-                #tableBuildUpgraderResults td.tdOther {
-                    background-color: black;
-                    text-align: center;
-                }
-
-        #divPartReplacerForm {
-            background-color: #000066;
-            color: white;
-            margin: auto;
-            width: 600px;
-            padding: 15px 20px;
-            margin-bottom: 20px;
-        }
-
-        #tablePartReplacerResults {
-            border: none;
-            padding: 8px;
-            border-collapse: collapse;
-            margin: auto;
-            font-size: 15px;
-        }
-
-            #tablePartReplacerResults td {
-                background-color: black;
-                color: white;
-                border: 1px solid;
-                padding: 5px;
-            }
-
-                #tablePartReplacerResults td.tdCpu {
-                    background-color: #003A00;
-                }
-
-                #tablePartReplacerResults td.tdGpu1Type {
-                    background-color: #00003F;
-                    text-align: center;
-                }
-
-                #tablePartReplacerResults td.tdGpu1Part {
-                    background-color: #00003F;
-                }
-
-                #tablePartReplacerResults td.tdGpu2Type {
-                    background-color: #00003F;
-                    text-align: center;
-                }
-
-                #tablePartReplacerResults td.tdGpu2Part {
-                    background-color: #00003F;
-                }
-
-                #tablePartReplacerResults td.tdMobo {
-                    background-color: #4C0000
-                }
-
-                #tablePartReplacerResults td.tdPrice {
-                    background-color: #004C00;
-                    text-align: center;
-                }
-
-                #tablePartReplacerResults td.tdOther {
-                    background-color: black;
-                    text-align: center;
-                }
-
-        #div3DMarkScoreCalculatorHistory {
-            color: white;
-            background-color: black;
-        }
-
-        #table3DMarkScoreCalculatorHistory {
-            border: none;
-            padding: 8px;
-            border-collapse: collapse;
-            margin: auto;
-            font-size: 15px;
-        }
-
-            #table3DMarkScoreCalculatorHistory td {
-                background-color: #1E5078;
-                color: white;
-                border: 1px solid;
-                padding: 6px;
-            }
-
-                #table3DMarkScoreCalculatorHistory td.tdCpu {
-                    background-color: #003A00;
-                }
-
-                #table3DMarkScoreCalculatorHistory td.tdramChannel {
-                    background-color: #54280B;
-                    text-align: center;
-                    padding: 0px 12px 0px 12px;
-                }
-
-                #table3DMarkScoreCalculatorHistory td.tdRamSpeed {
-                    background-color: #54280B;
-                    text-align: center;
-                }
-
-                #table3DMarkScoreCalculatorHistory td.tdRamPart {
-                    background-color: #54280B;
-                }
-
-                #table3DMarkScoreCalculatorHistory td.tdGpuCount {
-                    background-color: #00003F;
-                    text-align: center;
-                    padding: 0px 12px 0px 12px;
-                }
-
-                #table3DMarkScoreCalculatorHistory td.tdGpuType {
-                    background-color: #00003F;
-                    text-align: center;
-                }
-
-                #table3DMarkScoreCalculatorHistory td.tdGpuPart {
-                    background-color: #00003F;
-                }
-
-                #table3DMarkScoreCalculatorHistory td.tdMobo {
-                    background-color: #4C0000
-                }
-
-                #table3DMarkScoreCalculatorHistory td.tdPrice {
-                    background-color: #004C00;
-                    text-align: center;
-                }
-
-                #table3DMarkScoreCalculatorHistory td.tdScore {
-                    background-color: #442266;
-                    text-align: center;
-                }
-
-                #table3DMarkScoreCalculatorHistory td.tdOther {
-                    background-color: black;
-                    text-align: center;
-                }
-
-        #divBuildMakerSaves {
-            color: white;
-            background-color: black;
-        }
-
-        #tableBuildMakerSaves {
-            border: none;
-            padding: 8px;
-            border-collapse: collapse;
-            margin: auto;
-            font-size: 15px;
-        }
-
-            #tableBuildMakerSaves td {
-                background-color: #1E5078;
-                color: white;
-                border: 1px solid;
-                padding: 6px;
-            }
-
-                #tableBuildMakerSaves td.tdCase {
-                    background-color: #450045;
-                }
-
-                #tableBuildMakerSaves td.tdCpu {
-                    background-color: #003A00;
-                }
-
-                #tableBuildMakerSaves td.tdramChannel {
-                    background-color: #54280B;
-                    text-align: center;
-                    padding: 0px 12px 0px 12px;
-                }
-
-                #tableBuildMakerSaves td.tdRamSpeed {
-                    background-color: #54280B;
-                    text-align: center;
-                }
-
-                #tableBuildMakerSaves td.tdRamPart {
-                    background-color: #54280B;
-                }
-
-                #tableBuildMakerSaves td.tdGpuCount {
-                    background-color: #00003F;
-                    text-align: center;
-                    padding: 0px 12px 0px 12px;
-                }
-
-                #tableBuildMakerSaves td.tdGpuType {
-                    background-color: #00003F;
-                    text-align: center;
-                }
-
-                #tableBuildMakerSaves td.tdGpuPart {
-                    background-color: #00003F;
-                }
-
-                #tableBuildMakerSaves td.tdMobo {
-                    background-color: #4C0000
-                }
-
-                #tableBuildMakerSaves td.tdPrice {
-                    background-color: #004C00;
-                    text-align: center;
-                }
-
-                #tableBuildMakerSaves td.tdScore {
-                    background-color: #442266;
-                    text-align: center;
-                }
-
-                #tableBuildMakerSaves td.tdOther {
-                    background-color: black;
-                    text-align: center;
-                }
-    </style>
-</head>
 
 <body id="v1">
+
     <div id="divNavigationBar">
         <table id="tableNavigationBar" align="center">
             <tr>
                 <td class="tdNavigationBar" onclick="showPage('div3DMarkScoreCalculator');">3DMark 跑分</td>
-                <td class="tdNavigationBar" onclick="showPage('divBuildMaker');">装机配置单</td>
-                <td class="tdNavigationBar" onclick="showPage('divBuildUpgrader');">配置升级</td>
-                <td class="tdNavigationBar" onclick="showPage('divPartReplacer');">配件替换</td>
-                <td class="tdNavigationBar" onclick="showPage('divHistoryAndSaves');">历史&保存</td>
+                <td class="tdNavigationBar" onclick="showPage('divBuildMaker');">新整机</td>
+                <td class="tdNavigationBar" onclick="showPage('divBuildUpgrader');">整机升级</td>
+                <td class="tdNavigationBar" onclick="showPage('divPartReplacer');">部件替换</td>
+                <td class="tdNavigationBar" onclick="showPage('divHistoryAndSaves');">历史 &amp; 保存</td>
+                
+                <td class="tdNavigationBar" onclick="showPage('divfeedback');"><a href="https://lztttt.tk/tool/talk" target="_blank"   >    反馈</td>
             </tr>
         </table>
     </div>
@@ -623,7 +45,7 @@
 
                 <tr>
                     <td class="tdOptionHemLabel">
-                    包括硬件拓展mod (HEM) 配件?
+                      包括硬件扩展模块（HEM）零件
                     </td>
                     <td class="tdOptionHemCheckbox">
                         <input type="checkbox" name="inputOptionHem" class="optionCheckbox" onclick="
@@ -636,7 +58,7 @@
                 </tr>
                 <tr>
                     <td class="tdOptionPartsNotInShopLabel">
-                        包括不在商店里的配件?
+                        包括不在商店内的零件
                     </td>
                     <td class="tdOptionPartsNotInShopCheckbox">
                         <input type="checkbox" name="inputOptionPartsNotInShop" class="optionCheckbox" onclick="
@@ -653,9 +75,10 @@
     <div id="divLevel">
         <form id="formLevel">
             <table id="tableLevel" align="center">
-                <tr title="确定哪些部分是可用的。级别只适用于职业模式。ESports DLC和IT扩展的所有部件都已解锁。">
+                <!-- <tr title="Determine which parts are available. Levels are only applicable to Career mode. ESports DLC and IT Expansion have all parts unlocked."> -->
+                    <tr title="确定哪些部分是可用的。级别只适用于职业模式。ESports DLC和IT扩展的所有部件都已解锁。">
                     <td class="tdOptionAllPartsUnlockedLabel">
-                        已解锁所有配件?
+                         已解锁所有零件
                     </td>
                     <td class="tdOptionAllPartsUnlockedCheckbox">
                         <input type="checkbox" name="inputOptionAllPartsUnlocked" class="optionCheckbox" onclick="
@@ -675,56 +98,18 @@
                         ">
                     </td>
                     <td class="tdLevelLabel">
-                        职业等级:
+                        职业等级：
                     </td>
                     <td class="tdLevelValue">
                         <input name="inputLevel" class="levelText" onchange="
                             filterPartsForLevel();
                         ">
-                    </td>
-                    <td class="tdLevelPercentThroughLabel">
-                        % 已通过:
-                    </td>
-                    <td class="tdLevelPercentThroughValue">
-                        <input name="inputLevelPercentThrough" class="levelText" onchange="
-                            filterPartsForLevel();
-                        ">
-                    </td>
+                
                 </tr>
             </table>
         </form>
     </div>
-    <div id="divPages">
-
-        <datalist id="listCases"></datalist>
-        <datalist id="listCpus"></datalist>
-        <datalist id="listCpus3DMark"></datalist>
-        <datalist id="listGpus"></datalist>
-        <datalist id="listGpus3DMark"></datalist>
-        <datalist id="listMobos"></datalist>
-        <datalist id="listStorageM2s"></datalist>
-
-        
-        <style>
-            .dropdown {
-              position: relative;
-              display: inline-block;
-            }
-            .dropdown-content {
-              display: none;
-              position: absolute;
-              background-color: rgba(60, 52, 177, 0.856);
-              min-width: 160px;
-              box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-              font: size 0.8em;
-              font-weight: bold;
-              line-height: 24px;
-              /* padding: 10px 15px; */
-            }
-            .dropdown:hover .dropdown-content {
-              display: block;
-            }
-            </style>  <style>
+    <style>
         .dropdown {
           position: relative;
           display: inline-block;
@@ -732,7 +117,7 @@
         .dropdown-content {
           display: none;
           position: absolute;
-          background-color: #324ba88e;
+          background-color: rgba(55, 85, 65, 0.856);
           min-width: 160px;
           box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
           font: size 0.8em;
@@ -744,26 +129,34 @@
           display: block;
         }
         </style>
+    <div id="divPages">
 
-        <!-- 弹出菜单 -->
+        <datalist id="listCases"></datalist>
+        <datalist id="listCpus"></datalist>
+        <datalist id="listCpus3DMark"></datalist>
+        <datalist id="listGpus"></datalist>
+        <datalist id="listGpus3DMark"></datalist>
+        <datalist id="listMobos"></datalist>
+        <datalist id="listStorageM2s"></datalist>
+
         <div id="div3DMarkScoreCalculator">
             <div id="div3DMarkScoreCalculatorForm">
                 <form id="form3DMarkScoreCalculator">
                     <table>
                         <caption>
                             PC-Building-Simulator
-                             3DMark 跑分计算器(v1.15.3)
+                             3DMark 跑分计算器(v1.15.1)
                              <div class="dropdown">
                                 <span >关于</span>
                                 <div class="dropdown-content">
                                     <p>PC-Building-Simulator
-                                    3DMark 跑分计算器(v1.5.3)</p>
-                                   <a href="https://jacobwklein.github.io/PC-Building-Simulator/HTML-Calculator/Current-Version/PC-Building-Simulator-HTML-Calculator.html">原版(Englishi)</a>
-                                   <!-- <a href="https://cdn.jsdelivr.net/gh/lztttt/pic/img2022/16.png" target=blank>授权</a> -->
+                                    3DMark 跑分计算器(v1.5.1)</p>
+                                   <a href="https://jacobwklein.github.io/PC-Building-Simulator/HTML-Calculator/Current-Version/PC-Building-Simulator-HTML-Calculator.html">原版</a>
+                                   <a href="https://cdn.jsdelivr.net/gh/lztttt/pic/img2022/16.png" target=blank>授权</a>
 
                                   </p>作者：PUC_Snakeman</p>
                                   <p>汉化：lztttt</p>
-                                  <p>问题反馈请联系1975677818@qq.com 或提交issue</p>
+                                  <p>如有侵权，请联系1975677818@qq.com 或提交issue</p>
                                 </br><script type="text/javascript" src="https://s4.cnzz.com/z_stat.php?id=1280903101&web_id=1280903101"></script>  </div>
                             </div>
                             <!-- <div class="dropdown">
@@ -777,7 +170,7 @@
                            
                         </caption>
                         <tr>
-                            <td>CPU (处理器)</td>
+                            <td>CPU(中央处理器)</td>
                             <td>
                                 <input name="input3DMarkCpu" list="listCpus3DMark" onchange="
                                     updateRamSpeedOptions3DMark();
@@ -786,14 +179,14 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>内存频率</td>
+                            <td>RAM(内存)频率</td>
                             <td>
                                 <select name="select3DMarkRamSpeed">
                                 </select>
                             </td>
                         </tr>
                         <tr>
-                            <td>内存（通道）数量</td>
+                            <td>RAM(内存)通道</td>
                             <td>
                                 <select name="select3DMarkRamChannel">
                                     <option value="1">1: 单通道</option>
@@ -804,11 +197,11 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>显卡</td>
+                            <td>GPU(显卡)</td>
                             <td><input name="input3DMarkGpu" list="listGpus3DMark"></td>
                         </tr>
                         <tr>
-                            <td># 多显卡？</td>
+                            <td># 多显卡</td>
                             <td>
                                 <select name="select3DMarkGpuCount">
                                     <option value="1" selected>1: 单显卡</option>
@@ -819,12 +212,16 @@
                         <tr>
                             <td></td>
                             <td align="center">
+                                作者：PUC_Snakeman
                                 <button type="button" onclick="
                                     CalculatorCalculate();
                                 ">
-                                    计算
+                                   计算
                                 </button>
+                                <button type="button"  onclick="javascript:location.reload()">清零</button>
+                               汉化：lztttt
                             </td>
+                        
                         </tr>
                         <tr></tr>
                         <tr></tr>
@@ -849,7 +246,7 @@
                             <td id="td3DMarkCpuScore"></td>
                         </tr>
                         <tr>
-                            <td>显卡 得分</td>
+                            <td>GPU 得分</td>
                             <td id="td3DMarkGpuScore"></td>
                         </tr>
                         <tr></tr>
@@ -871,11 +268,11 @@
                             <td id="td3DMarkCpuPriceUsed"></td>
                         </tr>
                         <tr>
-                            <td>显卡（全部） 价格 全新</td>
+                            <td>GPU(s) 价格 全新</td>
                             <td id="td3DMarkGpusPriceNew"></td>
                         </tr>
                         <tr>
-                            <td>显卡（全部） 价格 二手</td>
+                            <td>GPU(s) 价格 二手</td>
                             <td id="td3DMarkGpusPriceUsed"></td>
                         </tr>
                         <tr></tr>
@@ -901,20 +298,23 @@
                         <tr></tr>
                         <tr></tr>
                         <tr>
-                            <td>整机功率</td>
+                            <td>整机功耗（W）</td>
                             <td id="td3DMarkSystemWatts"></td>
+                        
                         </tr>
+              
                     </table>
                 </form>
             </div>
         </div>
+       
         <div id="divBuildMaker">
             <div id="divBuildMakerForm">
                 <form id="formBuildMaker">
                     <table>
-                        <caption>装机配置单</caption>
+                        <caption>新整机搭配</caption>
                         <tr><td><u>需求:</u></td><td></td></tr>
-                        <tr title="花多少钱">
+                        <tr title="Total amount you can spend.">
                             <td>
                                 预算
                             </td>
@@ -922,33 +322,33 @@
                                 <input name="inputBuildMakerBudget">
                             </td>
                         </tr>
-                        <tr title="留给其他配件的预算 如机箱, 风扇, 硬盘, 电源, 等">
+                        <tr title="Amount you want to reserve for other parts, like: case, fans, storage, PSU, etc.">
                             <td>
-                                保留预算
+                                预算浮动
                             </td>
                             <td>
                                 <input name="inputBuildMakerReservedBudget" placeholder="400">
                             </td>
                         </tr>
-                        <tr title="目标3Dmark 跑分">
+                        <tr title="Target 3DMark score.">
                             <td>
-                                目标分数
+                                目标跑分
                             </td>
                             <td>
                                 <input name="inputBuildMakerTarget3DMarkScore">
                             </td>
                         </tr>
-                        <tr title="3DMark分数偏移，允许结果为更高的3DMark分数。.">
+                        <tr title="3DMark score offset, to allow results that have higher 3DMark scores.">
                             <td>
-                                分数偏移 +
+                                分数浮动
                             </td>
                             <td>
                                 <input name="inputBuildMakerTarget3DMarkScoreOffset" placeholder="400">
                             </td>
                         </tr>
-                        <tr title="# 方案数量">
+                        <tr title="# of results to return.">
                             <td>
-                                #
+                                方案数量
                             </td>
                             <td>
                                 <input name="inputBuildMakerResultsRequested" placeholder="15">
@@ -962,65 +362,66 @@
                         <tr></tr>
                         <tr></tr>
                         <tr></tr>
-                        <tr><td><u>可选</u></td><td></td></tr>
-                        <tr title="限制到CPU插槽。用于更好匹配性能。">
+                        <tr><td><u>选项:</u></td><td></td></tr>
+                        <tr title="Limit to a certain CPU Socket. Useful for targeting Coffee Lake CPUs for higher clocks.">
                             <td>
-                                CPU 插槽 （平台）
+                                CPU 插槽
                             </td>
                             <td>
                                 <select name="selectBuildMakerCpuSocket">
                                 </select>
                             </td>
                         </tr>
-                        <tr title="# 限制显卡数量">
+                        <tr title="# of GPUs allowed for each result.">
                             <td>
-                                # 显卡数量
+                                # 显卡
                             </td>
+                            <!-- 注意此处的option标签内的内容与js的变量相连别乱改 -->
                             <td>
                                 <select name="selectBuildMakerGpuCount">
-                                    <option selected>Any</option>
+                                    <option selected>不限</option>
                                     <option value="1">1: 单显卡</option>
-                                    <option value="2">2: 双显卡</option>
+                                    <option value="2">2: 多显卡</option>
                                 </select>
                             </td>
                         </tr>
-                        <tr title="限制显卡散热类型">
+                        <tr title="Limit to a certain GPU Type.">
                             <td>
                                 显卡散热类型
                             </td>
                             <td>
                                 <select name="selectBuildMakerGpuType">
-                                    <option selected>Any</option>
+                                    <option selected>不限</option>
                                     <option value="Air">风冷</option>
                                     <option value="Water">水冷</option>
                                 </select>
                             </td>
                         </tr>
-                        <tr title="方案中包括主板">
+                        <tr title="Include the Motherboard in the result set.">
                             <td>
-                                包括主板
+                                包含主板
                             </td>
                             <td>
                                 <input type="checkbox" name="inputBuildMakerIncludeMotherboard" class="bigCheckbox" checked>
                             </td>
                         </tr>
-                        <tr title="方案中包括机箱">
+                        <tr title="Include the Case in the result set.">
                             <td>
-                                包括机箱
+                                包含机箱
                             </td>
                             <td>
                                 <input type="checkbox" name="inputBuildMakerIncludeCase" class="bigCheckbox">
                             </td>
                         </tr>
-                        <tr title="方案中包括内存">
+                        <tr title="Include the RAM part in the result set.">
                             <td>
-                                包括内存
+                                包含内存
                             </td>
                             <td>
                                 <input type="checkbox" name="inputBuildMakerIncludeRamPart" class="bigCheckbox">
                             </td>
                         </tr>
-                        <tr title="只使用可以超频的配件">
+                        <tr title="Only list CPUs and Motherboards that can be used for overclocking.">
                             <td>
                                 可超频
                             </td>
@@ -1034,7 +435,7 @@
                                 <button type="button" onclick="
                                     BuildMakerGetBuilds();
                                 ">
-                                    获得方案
+                                    搜索（会有3-10秒卡顿，请耐心等待）
                                 </button>
                             </td>
                         </tr>
@@ -1046,26 +447,26 @@
                     <tr>
                         <td class="tdCase"><b>机箱</b></td>
                         <td class="tdCpu"><b>CPU</b></td>
-                        <td class="tdramChannel"><b>内存数量</b></td>
-                        <td class="tdRamSpeed"><b>内存频率</b></td>
+                        <td class="tdramChannel"><b>数量</b></td>
+                        <td class="tdRamSpeed"><b>频率</b></td>
                         <td class="tdRamPart"><b>内存</b></td>
-                        <td class="tdGpuCount"><b>显卡数量</b></td>
+                        <td class="tdGpuCount"><b>数量</b></td>
                         <td class="tdGpuType"><b>散热类型</b></td>
                         <td class="tdGpuPart"><b>显卡</b></td>
                         <td class="tdMobo"><b>主板</b></td>
                         <td class="tdPrice"><b>总价</b></td>
-                        <td class="tdPrice"><b>预算剩余</b></td>
+                        <td class="tdPrice"><b>剩余预算</b></td>
                         <td class="tdScore"><b>跑分</b></td>
-                        <td class="tdOther"><b>功率</b></td>
-                        <td class="tdOther"><b>保存</b></td>
+                        <td class="tdOther"><b>瓦数</b></td>
+                        <td class="tdOther"><b>保存?</b></td>
                     </tr>
                 </table>
             </div>
             <div id="divBuildMakerSaveForm">
                 <form id="formBuildMakerSave">
                     <input name="inputBuildMakerSaveFormComment" placeholder="Comment">
-                    <button type="button" onclick="ProcessBuildMakerSave(true);">Save</button>
-                    <button type="button" onclick="ProcessBuildMakerSave(false);">Cancel</button>
+                    <button type="button" onclick="ProcessBuildMakerSave(true);">保存</button>
+                    <button type="button" onclick="ProcessBuildMakerSave(false);">取消</button>
                 </form>
             </div>
         </div>
@@ -1074,23 +475,23 @@
                 <form id="formBuildUpgrader" name="formBuildUpgrader">
                     <table>
                         <caption>
-                            配置升级
+                            整机升级助手
                         </caption>
-                        <tr><td><u>需求:</u></td><td></td></tr>
-                        <tr title="你想花多少">
+                        <tr><td><u>需求：</u></td><td></td></tr>
+                        <tr title="Total amount you can spend.">
                             <td>预算</td>
                             <td><input name="inputBuildUpgraderBudget" /></td>
                         </tr>
-                        <tr title="留给其他配件的预算 如机箱, 风扇, 硬盘, 电源, 等">
-                            <td>保留预算</td>
+                        <tr title="Amount you want to reserve for other parts, like: case, fans, storage, PSU, etc.">
+                            <td>最低价格</td>
                             <td><input name="inputBuildUpgraderReservedBudget" placeholder="0" /></td>
                         </tr>
-                        <tr title="目标3Dmark跑分">
+                        <tr title="Target 3DMark score.">
                             <td>目标跑分</td>
                             <td><input name="inputBuildUpgraderTarget3DMarkScore" /></td>
                         </tr>
-                        <tr title="3DMark分数偏移，允许结果为更高的3DMark分数。">
-                            <td>跑分偏移</td>
+                        <tr title="3DMark score offset, to allow results that have higher 3DMark scores.">
+                            <td>跑分浮动+区间</td>
                             <td><input name="inputBuildUpgraderTarget3DMarkScoreOffset" placeholder="400" /></td>
                         </tr>
                         <tr title="# of results to return.">
@@ -1105,7 +506,7 @@
                         <tr></tr>
                         <tr></tr>
                         <tr></tr>
-                        <tr><td><u>原方案</u></td><td></td></tr>
+                        <tr><td><u>(请逐一填写)原配置：</u></td><td></td></tr>
                         <tr>
                             <td>机箱</td>
                             <td>
@@ -1114,8 +515,8 @@
                                 ">
                             </td>
                         </tr>
-                        <tr title="如果原配置有M.2，请在此处输入以确保兼容性。">
-                            <td>M.2硬盘</td>
+                        <tr title="If the Original System has an M.2, enter it here to ensure compatibility.">
+                            <td>M.2固态</td>
                             <td>
                                 <input name="inputBuildUpgraderOriginalSystemM2" list="listStorageM2s" onchange="
                                     updateMoboOptionsBuildUpgrader();
@@ -1123,7 +524,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>CPU</td>
+                            <td>CPU (中央处理器)</td>
                             <td>
                                 <input name="inputBuildUpgraderOriginalSystemCpu" list="listCpus"  onchange="
                                     updateMoboOptionsBuildUpgrader();
@@ -1137,12 +538,11 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>内存 数量
-                            </td>
+                            <td>内存数量</td>
                             <td><input name="inputBuildUpgraderRamSticks" placeholder="1" /></td>
                         </tr>
                         <tr>
-                            <td>显卡</td>
+                            <td>GPU (显卡)</td>
                             <td>
                                 <input name="inputBuildUpgraderOriginalSystemGpu" list="listGpus"  onchange="
                                     updateMoboOptionsBuildUpgrader();
@@ -1150,13 +550,13 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>多显卡</td>
+                            <td># 显卡数量</td>
                             <td>
                                 <select name="selectBuildUpgraderOriginalSystemGpuCount" onchange="
                                     updateMoboOptionsBuildUpgrader();
                                 ">
-                                    <option value="1" selected>单显卡</option>
-                                    <option value="2">双显卡</option>
+                                    <option value="1" selected>1: 单显卡</option>
+                                    <option value="2">2: 双显卡</option>
                                 </select>
                             </td>
                         </tr>
@@ -1175,26 +575,26 @@
                         <tr></tr>
                         <tr></tr>
                         <tr></tr>
-                        <tr><td><u>选项</u></td><td></td></tr>
-                        <tr title="# 方案允许使用多显卡。">
-                            <td># 多显卡</td>
+                        <tr><td><u>选项:</u></td><td></td></tr>
+                        <tr title="# of GPUs allowed for each result.">
+                            <td># 显卡数量</td>
                             <td>
                                 <select name="selectBuildUpgraderOptionsGpuCount">
-                                    <option selected>Any</option>
-                                    <option value="1">1: Single-GPU</option>
-                                    <option value="2">2: Dual-GPUs</option>
+                                    <option selected>不限</option>
+                                    <option value="1">1: 单显卡</option>
+                                    <option value="2">2: 双显卡</option>
                                 </select>
                             </td>
                         </tr>
-                        <tr title="限制显卡散热类型">
+                        <tr title="Limit to a certain GPU Type.">
                             <td>
                                 显卡散热类型
                             </td>
                             <td>
                                 <select name="selectBuildUpgraderOptionsGpuType">
-                                    <option selected>Any</option>
-                                    <option value="Air">风冷</option>
-                                    <option value="Water">水冷</option>
+                                    <option selected>不限</option>
+                                    <option value="风冷">风冷</option>
+                                    <option value="水冷">水冷</option>
                                 </select>
                             </td>
                         </tr>
@@ -1204,7 +604,7 @@
                                 <button type="button" onclick="
                                     BuildUpgraderGetUpgrades();
                                 ">
-                                    获得升级方案
+                                    计算（会有2-10秒卡顿，请耐心等待）
                                 </button>
                             </td>
                         </tr>
@@ -1215,14 +615,14 @@
                 <table id="tableBuildUpgraderResults">
                     <tr>
                         <td class="tdCpu"><b>CPU</b></td>
-                        <!-- <td class="tdramChannel"><b>#</b></td> -->
-                        <!-- <td class="tdRamSpeed"><b>Speed</b></td> -->
-                        <!-- <td class="tdRamPart"><b>RAM</b></td> -->
-                        <td class="tdGpuCount"><b>显卡数量</b></td>
-                        <td class="tdGpuType"><b>显卡散热</b></td>
+                        <!--<td class="tdramChannel"><b>#</b></td>
+                        <td class="tdRamSpeed"><b>Speed</b></td>
+                        <td class="tdRamPart"><b>RAM</b></td>-->
+                        <td class="tdGpuCount"><b>数量</b></td>
+                        <td class="tdGpuType"><b>类型</b></td>
                         <td class="tdGpuPart"><b>显卡</b></td>
                         <td class="tdMobo"><b>主板</b></td>
-                        <td class="tdPrice"><b>总价格</b></td>
+                        <td class="tdPrice"><b>价格</b></td>
                         <td class="tdPrice"><b>剩余预算</b></td>
                         <td class="tdScore"><b>跑分</b></td>
                         <td class="tdOther"><b>功率</b></td>
@@ -1235,19 +635,19 @@
                 <form id="formPartReplacer" name="formPartReplacer">
                     <table>
                         <caption>
-                            配件替换
+                            部件替换助手
                         </caption>
                         <tr><td><u>需求</u></td><td></td></tr>
-                        <tr title="花多少钱">
+                        <tr title="Total amount you can spend.">
                             <td>预算</td>
                             <td><input name="inputPartReplacerBudget" /></td>
                         </tr>
-                        <tr title="留给其他配件的预算 如机箱, 风扇, 硬盘, 电源, 等">
-                            <td>保留预算</td>
+                        <tr title="Amount you want to reserve for other parts, like: case, fans, storage, PSU, etc.">
+                            <td>最低价格</td>
                             <td><input name="inputPartReplacerReservedBudget" placeholder="0" /></td>
                         </tr>
-                        <tr title="给出 方案数量">
-                            <td># 方案数量 </td>
+                        <tr title="# of results to return.">
+                            <td># 方案数量</td>
                             <td><input name="inputPartReplacerResultsRequested" placeholder="200" /></td>
                         </tr>
                         <tr></tr>
@@ -1267,7 +667,7 @@
                                 ">
                             </td>
                         </tr>
-                        <tr title="如果原配置有M.2，请在此处输入以确保兼容性。">
+                        <tr title="If the Original System has an M.2, enter it here to ensure compatibility.">
                             <td>M.2硬盘</td>
                             <td>
                                 <input name="inputPartReplacerOriginalSystemM2" list="listStorageM2s" onchange="
@@ -1282,7 +682,7 @@
                         <tr></tr>
                         <tr></tr>
                         <tr>
-                            <td>CPU</td>
+                            <td>CPU (中央处理器)</td>
                             <td>
                                 <input name="inputPartReplacerOriginalSystemCpu" list="listCpus" onchange="
                                     updateMoboOptionsPartReplacer();
@@ -1296,8 +696,8 @@
                             <td>
                                 <select name="selectPartReplacerOriginalSystemCpuRequest">
                                     <option selected></option>
-                                    <option value="Fix">替换、维修</option>
-                                    <option value="Upgrade">升级</option>
+                                    <option value="Fix">替换/维修</option>
+                                    <option value="Upgrade">Upgrade</option>
                                 </select>
                             </td>
                         </tr>
@@ -1308,7 +708,7 @@
                         <tr></tr>
                         <tr></tr>
                         <tr>
-                            <td>显卡 1</td>
+                            <td>GPU (显卡) 1</td>
                             <td>
                                 <input name="inputPartReplacerOriginalSystemGpu1" list="listGpus" onchange="
                                     updateMoboOptionsPartReplacer();
@@ -1317,12 +717,12 @@
                         </tr>
                         <tr>
                             <td>
-                                需求
+                             需求
                             </td>
                             <td>
                                 <select name="selectPartReplacerOriginalSystemGpu1Request">
                                     <option selected></option>
-                                    <option value="Fix">替换、维修option>
+                                    <option value="Fix">替换/维修</option>
                                     <option value="Upgrade">升级</option>
                                 </select>
                             </td>
@@ -1334,7 +734,7 @@
                         <tr></tr>
                         <tr></tr>
                         <tr>
-                            <td>显卡 2</td>
+                            <td>GPU (显卡) 2</td>
                             <td>
                                 <input name="inputPartReplacerOriginalSystemGpu2" list="listGpus" onchange="
                                     updateMoboOptionsPartReplacer();
@@ -1348,9 +748,9 @@
                             <td>
                                 <select name="selectPartReplacerOriginalSystemGpu2Request">
                                     <option selected></option>
-                                    <option value="Fix">替换、维修</option>
+                                    <option value="Fix">替换/维修</option>
                                     <option value="Upgrade">升级</option>
-                                    <option value="AddDual">增加一块显卡</option>
+                                    <option value="AddDual">添加</option>
                                 </select>
                             </td>
                         </tr>
@@ -1374,7 +774,7 @@
                             <td>
                                 <select name="selectPartReplacerOriginalSystemMoboRequest">
                                     <option selected></option>
-                                    <option value="Fix">维修、替换</option>
+                                    <option value="Fix">替换/维修</option>
                                 </select>
                             </td>
                         </tr>
@@ -1392,7 +792,7 @@
                                 <button type="button" onclick="
                                     PartReplacerGetParts()
                                 ">
-                                    获得方案
+                                    计算（会有2-10秒卡顿，请耐心等待）
                                 </button>
                             </td>
                         </tr>
@@ -1403,13 +803,13 @@
                 <table id="tablePartReplacerResults">
                     <tr>
                         <td class="tdCpu"><b>CPU</b></td>
-                        <td class="tdGpu1Type"><b>显卡1散热类型</b></td>
-                        <td class="tdGpu1Part"><b>显卡 1</b></td>
-                        <td class="tdGpu2Type"><b>显卡2散热类型</b></td>
+                        <td class="tdGpu1Type"><b>类型</b></td>
+                        <td class="tdGpu1Part"><b>显卡 2</b></td>
+                        <td class="tdGpu2Type"><b>类型</b></td>
                         <td class="tdGpu2Part"><b>显卡 2</b></td>
                         <td class="tdMobo"><b>主板</b></td>
                         <td class="tdPrice"><b>价格</b></td>
-                        <td class="tdPrice"><b>剩余预算</b></td>
+                        <td class="tdPrice"><b>预算剩余</b></td>
                         <td class="tdOther"><b>功率</b></td>
                     </tr>
                 </table>
@@ -1417,39 +817,41 @@
         </div>
         <div id="divHistoryAndSaves">
             <div id="div3DMarkScoreCalculatorHistory">
-                <h1>3DMark 跑分记录</h1>
+                <!-- h1标签的文本颜色 -->
+                <h1 style="color:black">3DMark 得分计算 历史</h1>
+                
                 <table id="table3DMarkScoreCalculatorHistory">
                     <tr>
                         <td class="tdCpu"><b>CPU</b></td>
-                        <td class="tdramChannel"><b>内存数量</b></td>
+                        <td class="tdramChannel"><b>#</b></td>
                         <td class="tdRamSpeed"><b>内存频率</b></td>
-                        <td class="tdGpuCount"><b>显卡数量</b></td>
-                        <td class="tdGpuType"><b>显卡散热类型b></td>
-                        <td class="tdGpuPart"><b>=显卡</b></td>
+                        <td class="tdGpuCount"><b>#</b></td>
+                        <td class="tdGpuType"><b>类型</b></td>
+                        <td class="tdGpuPart"><b>显卡</b></td>
                         <td class="tdPrice"><b>价格</b></td>
                         <td class="tdScore"><b>跑分</b></td>
-                        <td class="tdOther"><b>功率</b></td>
+                        <td class="tdOther"><b>瓦数</b></td>
                     </tr>
                 </table>
             </div>
             <div id="divBuildMakerSaves">
-                <h1>已保存配置单</h1>
+                <h1 style="color:black">已保存配置</h1>
                 <table id="tableBuildMakerSaves">
                     <tr>
                         <td class="tdCase"><b>机箱</b></td>
                         <td class="tdCpu"><b>CPU</b></td>
-                        <td class="tdramChannel"><b>内存数量</b></td>
+                        <td class="tdramChannel"><b>#</b></td>
                         <td class="tdRamSpeed"><b>内存频率</b></td>
                         <td class="tdRamPart"><b>内存</b></td>
-                        <td class="tdGpuCount"><b>显卡数量</b></td>
-                        <td class="tdGpuType"><b>显卡散热类型></td>
+                        <td class="tdGpuCount"><b>#</b></td>
+                        <td class="tdGpuType"><b>类型</b></td>
                         <td class="tdGpuPart"><b>显卡</b></td>
                         <td class="tdMobo"><b>主板</b></td>
                         <td class="tdPrice"><b>价格</b></td>
                         <td class="tdPrice"><b>剩余预算</b></td>
-                        <td class="tdScore"><b>得分</b></td>
-                        <td class="tdOther"><b>功率</b></td>
-                        <td class="tdOther"><b>备注</b></td>
+                        <td class="tdScore"><b>跑分</b></td>
+                        <td class="tdOther"><b>功耗</b></td>
+                        <td class="tdOther"><b>评价</b></td>
                     </tr>
                 </table>
             </div>
@@ -56032,7 +55434,7 @@
                     "fullName": "CORSAIR Vengeance LPX (Red) 32 GB 3600 MHz",
                     "manufacturer": "CORSAIR",
                     "partName": "Vengeance LPX (Red)",
-                    "inShop": "No",
+                    "inShop": "Yes",
                     "price": 445,
                     "sellPrice": 148,
                     "level": 28,
@@ -76061,7 +75463,7 @@
                     "type": "M2",
                     "speed": 2200,
                     "includesHeatsink": "Yes",
-                    "heatsinkThickness": 0.029
+                    "heatsinkThickness": 0.028
                 },
                 "Patriot Viper VPR100 M.2 512GB": {
                     "isHEMPart": false,
@@ -76077,7 +75479,7 @@
                     "type": "M2",
                     "speed": 2700,
                     "includesHeatsink": "Yes",
-                    "heatsinkThickness": 0.029
+                    "heatsinkThickness": 0.028
                 },
                 "Patriot Viper VPR100 M.2 1TB": {
                     "isHEMPart": false,
@@ -76093,7 +75495,7 @@
                     "type": "M2",
                     "speed": 3100,
                     "includesHeatsink": "Yes",
-                    "heatsinkThickness": 0.029
+                    "heatsinkThickness": 0.028
                 },
                 "Patriot Viper VPR100 M.2 2TB": {
                     "isHEMPart": false,
@@ -76109,7 +75511,7 @@
                     "type": "M2",
                     "speed": 3100,
                     "includesHeatsink": "Yes",
-                    "heatsinkThickness": 0.029
+                    "heatsinkThickness": 0.028
                 },
                 "Patriot Viper VP4300 M.2 1TB (Aluminum heatshield)": {
                     "isHEMPart": false,
@@ -76125,7 +75527,7 @@
                     "type": "M2",
                     "speed": 6600,
                     "includesHeatsink": "Yes",
-                    "heatsinkThickness": 0.029
+                    "heatsinkThickness": 0.028
                 },
                 "Patriot Viper VP4300 M.2 2TB (Aluminum heatshield)": {
                     "isHEMPart": false,
@@ -76141,7 +75543,7 @@
                     "type": "M2",
                     "speed": 7100,
                     "includesHeatsink": "Yes",
-                    "heatsinkThickness": 0.029
+                    "heatsinkThickness": 0.028
                 },
                 "Patriot Viper VP4300 M.2 1TB (Graphene heatshield)": {
                     "isHEMPart": false,
@@ -78569,7 +77971,7 @@
             }
             return value
         }
-        function getCpuSocketOptions(includeAnyOption) {
+        function getCpuSocketOptions(include不限Option) {
             var cpuSockets = new Array()
             for (cpu in data.cpus) {
                 if (!cpuSockets.includes(data.cpus[cpu].cpuSocket)) {
@@ -78582,8 +77984,8 @@
                 });
 
             var options = '';
-            if (includeAnyOption) {
-                options += '<option value="Any" selected>Any</option>'
+            if (include不限Option) {
+                options += '<option value="不限" selected>不限</option>'
             }
 
             var optionText = new Array()
@@ -79158,20 +78560,20 @@
                 cpuPrice = data.cpus[cpu].price
                 if ((cpuPrice >= budgetForParts) ||
                     (needCpuOverclock && !(data.cpus[cpu].canOverclock == "Yes")) ||
-                    (selectedCpuSocket != "Any" && selectedCpuSocket != data.cpus[cpu].cpuSocket)) {
+                    (selectedCpuSocket != "不限" && selectedCpuSocket != data.cpus[cpu].cpuSocket)) {
                     continue
                 }
 
                 // Gpu
                 for (gpu in data.gpus) {
-                    if ((selectedGpuType != "Any" && selectedGpuType != data.gpus[gpu].gpuType) ||
+                    if ((selectedGpuType != "不限" && selectedGpuType != data.gpus[gpu].gpuType) ||
                         (!cpuSupportsGpu(cpu, gpu))) {
                         continue
                     }
                     for (gpuCount = 1; gpuCount <= 2; gpuCount++) {
                         gpusPrice = gpuCount * data.gpus[gpu].price
                         if ((cpuPrice + gpusPrice > budgetForParts) ||
-                            (selectedGpuCount != "Any" && selectedGpuCount != gpuCount) ||
+                            (selectedGpuCount != "不限" && selectedGpuCount != gpuCount) ||
                             (gpuCount == 2 && data.gpus[gpu].multiGPU == null)) {
                             continue
                         }
@@ -79645,12 +79047,12 @@
             ramSpeed = getRamSpeedXMP(originalSystemRamSpeed, mobo)
             ramChannel = Math.min(originalSystemRamSticks, data.cpus[cpu].maxMemoryChannels)
             for (gpu in data.gpus) {
-                if ((selectedGpuType != "Any" && selectedGpuType != data.gpus[gpu].gpuType) ||
+                if ((selectedGpuType != "不限" && selectedGpuType != data.gpus[gpu].gpuType) ||
                     (!cpuSupportsGpu(cpu, gpu))) {
                     continue
                 }
                 for (gpuCount = 1; gpuCount <= 2; gpuCount++) {
-                    if ((selectedGpuCount != "Any" && selectedGpuCount != gpuCount) ||
+                    if ((selectedGpuCount != "不限" && selectedGpuCount != gpuCount) ||
                         (!moboSupportsGpu(mobo, gpu, gpuCount)) ||
                         (pcCase != "" && !caseSupportsGpu(pcCase, gpu, gpuCount))) {
                         continue
@@ -79686,12 +79088,12 @@
                 ramChannel = Math.min(originalSystemRamSticks, data.cpus[cpu].maxMemoryChannels)
 
                 for (gpu in data.gpus) {
-                    if ((selectedGpuType != "Any" && selectedGpuType != data.gpus[gpu].gpuType) ||
+                    if ((selectedGpuType != "不限" && selectedGpuType != data.gpus[gpu].gpuType) ||
                         (!cpuSupportsGpu(cpu, gpu))) {
                         continue
                     }
                     for (gpuCount = 1; gpuCount <= 2; gpuCount++) {
-                        if ((selectedGpuCount != "Any" && selectedGpuCount != gpuCount) ||
+                        if ((selectedGpuCount != "不限" && selectedGpuCount != gpuCount) ||
                             (!moboSupportsGpu(mobo, gpu, gpuCount)) ||
                             (pcCase != "" && !caseSupportsGpu(pcCase, gpu, gpuCount))) {
                             continue
@@ -79762,12 +79164,12 @@
                 ramSpeed = getRamSpeedXMP(originalSystemRamSpeed, mobo)
 
                 for (gpu in data.gpus) {
-                    if ((selectedGpuType != "Any" && selectedGpuType != data.gpus[gpu].gpuType) ||
+                    if ((selectedGpuType != "不限" && selectedGpuType != data.gpus[gpu].gpuType) ||
                         (!cpuSupportsGpu(cpu, gpu))) {
                         continue
                     }
                     for (gpuCount = 1; gpuCount <= 2; gpuCount++) {
-                        if ((selectedGpuCount != "Any" && selectedGpuCount != gpuCount) ||
+                        if ((selectedGpuCount != "不限" && selectedGpuCount != gpuCount) ||
                             (!moboSupportsGpu(mobo, gpu, gpuCount)) ||
                             (pcCase != "" && !caseSupportsGpu(pcCase, gpu, gpuCount))) {
                             continue
@@ -79810,12 +79212,12 @@
                     ramChannel = Math.min(originalSystemRamSticks, data.cpus[cpu].maxMemoryChannels)
 
                     for (gpu in data.gpus) {
-                        if ((selectedGpuType != "Any" && selectedGpuType != data.gpus[gpu].gpuType) ||
+                        if ((selectedGpuType != "不限" && selectedGpuType != data.gpus[gpu].gpuType) ||
                             (!cpuSupportsGpu(cpu, gpu))) {
                             continue
                         }
                         for (gpuCount = 1; gpuCount <= 2; gpuCount++) {
-                            if ((selectedGpuCount != "Any" && selectedGpuCount != gpuCount) ||
+                            if ((selectedGpuCount != "不限" && selectedGpuCount != gpuCount) ||
                                 (!moboSupportsGpu(mobo, gpu, gpuCount)) ||
                                 (pcCase != "" && !caseSupportsGpu(pcCase, gpu, gpuCount))) {
                                 continue
@@ -80560,6 +79962,7 @@
             return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is inclusive and the minimum is inclusive
         }
     </script>
+    <script type="text/javascript" src="//js.users.51.la/21320735.js"></script>
 </body>
 
 </html>
